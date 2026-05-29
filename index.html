@@ -1,0 +1,1450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favico.jpg" type="image/png" />
+    <title>BKSHCL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-5 right-0 z-50 bg-[var(--color-primary)] rounded-l text-white text-xl p-2 transition-all duration-300 lg:hidden"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <!-- navbar  -->
+    <header class="sticky top-0 z-50 bg-[var(--color-bg)] shadow">
+      <nav class="max-w-[98rem] mx-auto px-4 md:px-0">
+        <div class="flex items-center justify-between h-20">
+          <!-- Left Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/logo-main.gif"
+              alt="BKSHCL Logo"
+              class="h-14 w-auto"
+            />
+          </a>
+
+          <!-- Center Nav Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-8 text-md font-medium text-[var(--color-title)]"
+          >
+            <li>
+              <a href="index.html" class="nav-link">गृहपृष्ठ</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="relative group">
+              <button type="button" class="nav-link flex items-center gap-1">
+                हाम्रो बारेमा
+                <span class="text-xs"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+
+              <ul
+                class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <li>
+                  <a href="/about-us.html" class="dropdown-link"
+                    >हाम्रो बारेमा</a
+                  >
+                </li>
+                <li>
+                  <a href="message.html" class="dropdown-link"
+                    >नेतृत्वको सन्देश</a
+                  >
+                </li>
+                <li>
+                  <a href="team.html" class="dropdown-link">टिम</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="projects.html" class="nav-link">आयोजना</a>
+            </li>
+
+            <li>
+              <a href="investor-detail.html" class="nav-link"
+                >लगानीकर्ता विवरण</a
+              >
+            </li>
+
+            <li>
+              <a href="documents.html" class="nav-link">कागजात</a>
+            </li>
+
+            <li>
+              <a href="gallery.html" class="nav-link">ग्यालरी</a>
+            </li>
+
+            <li>
+              <a href="csr.html" class="nav-link">CSR</a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="nav-link">सम्पर्क</a>
+            </li>
+          </ul>
+
+          <!-- Right Search -->
+          <div class="relative flex items-center gap-3">
+            <div
+              id="searchBox"
+              class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 opacity-0 scale-95 pointer-events-none transition-all duration-300"
+            >
+              <input
+                type="text"
+                placeholder="खोज्नुहोस्..."
+                class="w-56 px-4 py-2 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)]"
+              />
+            </div>
+
+            <button
+              id="searchToggle"
+              class="hidden lg:flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)] hover:bg-[var(--color-primary)] hover:text-white transition duration-300"
+              type="button"
+              aria-label="Search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobileMenuBtn"
+              class="lg:hidden h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+              type="button"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="lg:hidden overflow-hidden opacity-0 transition-all duration-500 ease-in-out"
+          style="max-height: 0px"
+        >
+          <div class="pb-5 pt-4 border-t border-[var(--color-border)] bg-white">
+            <!-- Mobile Search -->
+            <div class="mb-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="खोज्नुहोस्..."
+                  class="w-full px-4 py-3 pr-11 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)] transition"
+                />
+                <button
+                  type="button"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-title)] hover:text-[var(--color-primary)] transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+
+            <ul class="space-y-1 text-sm font-medium text-[var(--color-title)]">
+              <li><a href="index.html" class="mobile-link">गृहपृष्ठ</a></li>
+
+              <li>
+                <button
+                  id="mobileAboutToggle"
+                  type="button"
+                  class="mobile-link w-full flex items-center justify-between"
+                >
+                  <span>हाम्रो बारेमा</span>
+                  <i
+                    id="mobileAboutIcon"
+                    class="fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                  ></i>
+                </button>
+
+                <ul
+                  id="mobileAboutDropdown"
+                  class="overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  style="max-height: 0px"
+                >
+                  <li>
+                    <a href="about.html" class="mobile-sub-link"
+                      >हाम्रो बारेमा</a
+                    >
+                  </li>
+                  <li>
+                    <a href="message.html" class="mobile-sub-link">सन्देश</a>
+                  </li>
+                  <li><a href="team.html" class="mobile-sub-link">टिम</a></li>
+                </ul>
+              </li>
+
+              <li><a href="projects.html" class="mobile-link">आयोजना</a></li>
+              <li>
+                <a href="investor-detail.html" class="mobile-link"
+                  >लगानीकर्ता विवरण</a
+                >
+              </li>
+              <li><a href="documents.html" class="mobile-link">कागजात</a></li>
+              <li><a href="gallery.html" class="mobile-link">ग्यालरी</a></li>
+              <li><a href="csr.html" class="mobile-link">CSR</a></li>
+              <li><a href="contact.html" class="mobile-link">सम्पर्क</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="relative">
+      <!-- hero section  -->
+      <section class="relative w-full h-[75vh] overflow-hidden group">
+        <img
+          src="./assets/images/Background.png"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+          alt=""
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
+        ></div>
+
+        <!-- contentn -->
+        <div
+          class="absolute inset-0 flex flex-col justify-center pl-10 md:pl-52"
+        >
+          <div class="max-w-4xl space-y-6">
+            <h1 class="hero-title">
+              नेपालको ऊर्जा सुरक्षामा योगदान: बेतन कर्णाली हाइड्रोपावर
+            </h1>
+
+            <p class="hero-description pr-0 md:pr-20">
+              बेतन कर्णाली जलविद्युत आयोजना (४३९ मेगावाट) नेपालका कर्मचारी सञ्चय
+              कोषका सञ्चयकर्ताहरूको लगानीमा निर्माण हुन लागेको एक
+              अर्ध-जलाशययुक्त आयोजना हो।
+            </p>
+
+            <div class="flex gap-6">
+              <a href="" class="btn btn-primary">आयोजनाको प्रगति</a>
+              <a href="" class="btn btn-secondary">लगानीकर्ता पोर्टल</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- counter part -->
+      <section
+        class="relative pb-12 md:py-12 md:py-0 md:absolute md:left-0 md:right-0 md:-bottom-44"
+      >
+        <div class="max-w-7xl mx-auto px-4 md:px-0 bg-white py-12 shadow-xl">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center space-y-4 md:divide-x md:divide-[var(--color-border)]"
+          >
+            <div class="space-y-2">
+              <h2 class="text-5xl font-bold text-[var(--color-primary)]">
+                ४३९
+              </h2>
+              <p class="text-base text-[var(--color-text)] font-medium">
+                जडित क्षमता (मेगावाट)
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h2 class="text-5xl font-bold text-[var(--color-primary)]">
+                २,३०६
+              </h2>
+              <p class="text-base text-[var(--color-text)] font-medium">
+                वार्षिक ऊर्जा (GWh)
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h2 class="text-5xl font-bold text-[var(--color-primary)]">
+                ३५%
+              </h2>
+              <p class="text-base text-[var(--color-text)] font-medium">
+                पूर्वाधार निर्माण प्रगति
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h2 class="text-5xl font-bold text-[var(--color-primary)]">
+                ७.२k
+              </h2>
+              <p class="text-base text-[var(--color-text)] font-medium">
+                दर्ता भएका लगानीकर्ता
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- about us -->
+    <section class="py-12 md:mt-44">
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Left Column: Company Profile Description -->
+          <div class="lg:col-span-7 space-y-8 self-center">
+            <div class="border-l-[8px] border-[#047dd4] pl-4">
+              <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+                कम्पनी परिचय
+              </h1>
+            </div>
+
+            <div
+              class="text-[var(--color-text)] font-medium text-[18px] leading-relaxed space-y-4"
+            >
+              <p>
+                बेतन कर्णाली सञ्चयकर्ता हाइड्रोपावर कम्पनी लिमिटेड (BKSHCL)
+                नेपालको एक प्रमुख जलविद्युत विकासकर्ता हो, जसको स्थापना ठूला
+                पूर्वाधारका लागि आन्तरिक स्रोत परिचालन गर्ने परिकल्पनाका साथ
+                गरिएको हो। हामी कर्णाली बेसिनमा रहेको ४३९ मेगावाटको बेतन कर्णाली
+                जलविद्युत आयोजनाको विकासमा समर्पित छौं।
+              </p>
+              <p>
+                यो आयोजना नेपालको ऊर्जा क्षेत्रमा एउटा कोशेढुङ्गा साबित हुनेछ,
+                जसले देशको ऊर्जा सुरक्षामा मात्र नभई लाखौं सञ्चयकर्ताहरूको
+                आर्थिक उन्नतिमा समेत महत्वपूर्ण योगदान पुऱ्याउनेछ। हाम्रो मुख्य
+                उद्देश्य विश्वस्तरीय इन्जिनियरिङ र पारदर्शी सुशासन मार्फत
+                राष्ट्रिय हितको रक्षा गर्नु हो।
+              </p>
+            </div>
+            <div>
+              <a href="" class="btn btn-primary inline-flex items-center">
+                थप पढ्नुहोस्
+                <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Ownership Structure Card  -->
+          <div class="lg:col-span-5 bg-[var(--color-light-bg)] p-6 md:p-8">
+            <!-- Card Header -->
+            <div class="flex items-center gap-2 pb-4 mb-6">
+              <i
+                class="fa-solid fa-pie-chart text-[var(--color-primary)] text-xl"
+              ></i>
+
+              <h2 class="text-2xl font-bold text-[var(--color-primary)]">
+                स्वामित्व संरचना
+              </h2>
+            </div>
+
+            <!-- Ownership List Items -->
+            <div class="space-y-4 divide-y divide-[var(--color-border)]">
+              <div class="flex justify-between items-center gap-4 pb-4">
+                <span class="text-lg font-bold text-black"
+                  >कर्मचारी सञ्चय कोषका सञ्चयकर्ताहरू</span
+                >
+                <span class="text-xl font-extrabold text-[var(--color-primary)]"
+                  >४०%</span
+                >
+              </div>
+
+              <div class="flex justify-between items-center gap-4 pt-4 pb-4">
+                <span class="text-lg font-bold text-gray-800"
+                  >कर्मचारी सञ्चय कोष</span
+                >
+                <span class="text-xl font-extrabold text-[var(--color-primary)]"
+                  >१५%</span
+                >
+              </div>
+
+              <div class="flex justify-between items-center gap-4 pt-4 pb-4">
+                <span class="text-lg font-bold text-gray-800"
+                  >नेपाल विद्युत प्राधिकरण र विद्युत उत्पादन कम्पनी</span
+                >
+                <span class="text-xl font-extrabold text-[var(--color-primary)]"
+                  >२०%</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center gap-4 p-2 -mx-2 rounded pt-4"
+              >
+                <span class="text-lg font-bold text-black">सर्वसाधारण</span>
+                <span
+                  class="text-xl font-extrabold text-[var(--color-primary)] bg-[#FDFE07] h-8 w-12 flex items-center justify-center"
+                >
+                  २५%
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Footer Note -->
+            <p
+              class="text-sm text-[var(--color-text)] font-medium italic mt-8 pt-4 leading-relaxed"
+            >
+              * यो संरचनाले नेपालका श्रमिकहरूलाई आयोजनाको प्रत्यक्ष स्वामित्व
+              प्रदान गर्दछ।
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- message -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <!-- Header Section -->
+        <div class="text-center mb-12 space-y-2">
+          <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+            नेतृत्वको सन्देश
+          </h1>
+          <p class="text-sm md:text-base text-[var(--color-text)] font-medium">
+            समृद्ध भविष्य र दिगो ऊर्जाका लागि प्रतिबद्धता
+          </p>
+        </div>
+        <!-- 2-Column Split Cards Grid -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto"
+        >
+          <!-- Card 1 -->
+          <div
+            class="bg-[#047dd4] rounded shadow-md overflow-hidden flex flex-col sm:flex-row"
+          >
+            <div
+              class="w-full sm:w-2/5 h-64 sm:h-auto relative bg-gray-200 shrink-0"
+            >
+              <img
+                src="/assets/images/chairperson.jpg"
+                alt="Deepak Thapa"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+
+            <div
+              class="p-4 md:p-6 flex flex-col justify-between text-white space-y-6 flex-1"
+            >
+              <div class="space-y-3">
+                <div
+                  class="text-5xl font-serif font-black text-[#fcfe04] leading-none"
+                >
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p
+                  class="text-sm md:text-base font-medium leading-relaxed italic text-justify text-white"
+                >
+                  "बेतन कर्णाली केवल ऊर्जा उत्पादनको आयोजना मात्र होइन, यो
+                  नेपालका कर्मचारीहरूको सामूहिक शक्ति र लगानीको प्रतिफल हो। हामी
+                  पारदर्शीताका साथ अघि बढिरहेका छौं।"
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-white/50">
+                <h3 class="text-xl font-bold tracking-wide">दीपक थापा</h3>
+                <p
+                  class="text-base font-semibold text-[#fcfe04] mt-0.5 uppercase tracking-wider"
+                >
+                  अध्यक्ष, BKSHCL
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-[#047dd4] rounded shadow-md overflow-hidden flex flex-col sm:flex-row"
+          >
+            <div
+              class="w-full sm:w-2/5 h-64 sm:h-auto relative bg-gray-200 shrink-0"
+            >
+              <img
+                src="/assets/images/director.jpg"
+                alt="Deepak Thapa"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+
+            <div
+              class="p-4 md:p-6 flex flex-col justify-between text-white space-y-6 flex-1"
+            >
+              <div class="space-y-3">
+                <div
+                  class="text-5xl font-serif font-black text-[#fcfe04] leading-none"
+                >
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p
+                  class="text-sm md:text-base font-medium leading-relaxed italic text-justify text-white"
+                >
+                  "बेतन कर्णाली केवल ऊर्जा उत्पादनको आयोजना मात्र होइन, यो
+                  नेपालका कर्मचारीहरूको सामूहिक शक्ति र लगानीको प्रतिफल हो। हामी
+                  पारदर्शीताका साथ अघि बढिरहेका छौं।"
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-white/20">
+                <h3 class="text-xl font-bold tracking-wide">
+                  कृष्ण प्रसाद आचार्य
+                </h3>
+                <p
+                  class="text-base font-semibold text-[#fcfe04] mt-0.5 uppercase tracking-wider"
+                >
+                  प्रबन्ध निर्देशक, BKSHCL
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- आयोजना विवरण -->
+    <section class="bg-[#e5e9eb] py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Left Column -->
+          <div class="lg:col-span-7 space-y-8">
+            <div class="border-l-[8px] border-[#047dd4] pl-4">
+              <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+                आयोजना विवरण
+              </h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Card 1: आयोजनाको नाम -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#047dd4] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-circle-info text-base"></i>
+                  <span class="font-bold text-sm tracking-wide"
+                    >आयोजनाको नाम</span
+                  >
+                </div>
+                <div class="text-lg font-medium text-black">
+                  बेेतन कर्णाली जलविद्युत आयोजना (BKHEP)
+                </div>
+              </div>
+
+              <!-- Card 2: प्रकार -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#047dd4] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-sliders text-base rotate-90"></i>
+                  <span class="font-bold text-sm tracking-wide">प्रकार</span>
+                </div>
+                <div class="text-lg font-medium text-black">
+                  पिकिङ रन-अफ-रिभर (PRoR)
+                </div>
+              </div>
+
+              <!-- Card 3: जडित क्षमता (Yellow Left Border) -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#fcfe04] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-bolt text-base"></i>
+                  <span class="font-bold text-sm tracking-wide"
+                    >जडित क्षमता</span
+                  >
+                </div>
+                <div class="text-lg font-medium text-[#047dd4]">
+                  ४३९ <span class="text-black font-semibold"> मेगावाट</span>
+                </div>
+              </div>
+
+              <!-- Card 4: स्थान -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#047dd4] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-location-dot text-base"></i>
+                  <span class="font-bold text-sm tracking-wide">स्थान</span>
+                </div>
+                <div class="text-lg font-medium text-black">
+                  सुर्खेत र अछाम जिल्ला (कर्णाली प्रदेश)
+                </div>
+              </div>
+
+              <!-- Card 5: जलविज्ञान -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#047dd4] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-droplet text-base"></i>
+                  <span class="font-bold text-sm tracking-wide">जलविज्ञान</span>
+                </div>
+                <div class="text-lg font-medium text-black leading-normal">
+                  २२,५११ वर्ग किलोमिटर जलाधार, ५३६ घनमिटर/से. डिस्चार्ज
+                </div>
+              </div>
+
+              <!-- Card 6: ऊर्जा उत्पादन -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#047dd4] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-rotate text-base"></i>
+                  <span class="font-bold text-sm tracking-wide"
+                    >ऊर्जा उत्पादन</span
+                  >
+                </div>
+                <div class="text-lg font-medium text-black">
+                  २२९९ GWh (वर्षायाम १६१०, सुख्खायाम ६८९)
+                </div>
+              </div>
+
+              <!-- Card 7: प्रसारण लाइन -->
+              <div
+                class="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.02)] border-l-4 border-[#047dd4] p-4 space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#047dd4]">
+                  <i class="fa-solid fa-network-wired text-base"></i>
+                  <span class="font-bold text-sm tracking-wide"
+                    >प्रसारण लाइन</span
+                  >
+                </div>
+                <div class="text-lg font-medium text-black">
+                  ५ किलोमिटर, पुछ्मा सब-स्टेशन
+                </div>
+              </div>
+
+              <!-- Card 8: अनुमानित लागत (Full Blue Background Card) -->
+              <div
+                class="bg-[#047dd4] shadow-[0_4px_12px_rgba(0,0,0,0.02)] p-4 flex flex-col justify-center space-y-2"
+              >
+                <div class="flex items-center gap-2 text-[#FDFE07]">
+                  <i class="fa-solid fa-money-bill-wave text-base"></i>
+                  <span class="font-bold text-sm tracking-wide"
+                    >अनुमानित लागत</span
+                  >
+                </div>
+                <div class="flex items-center flex-wrap gap-3">
+                  <div class="text-lg font-extrabold text-white">
+                    ७४ अर्ब रुपैयाँ
+                  </div>
+                  <!-- IDC Badge -->
+                  <div
+                    class="bg-[#FDFE07] text-black text-xs font-bold px-2 py-0.5 flex items-center justify-center"
+                  >
+                    IDC बाहेक
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="lg:col-span-5">
+            <div class="bg-white h-[520px] p-1.5 rounded">
+              <img
+                src="./assets/images/image.png"
+                class="h-full w-full object-cover rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project overview -->
+    <!-- <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <div class="mb-10 space-y-4">
+          <div class="border-l-[8px] border-[#047dd4] pl-4">
+            <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+              आयोजना परिचय
+            </h1>
+          </div>
+
+   
+
+          <p
+            class="mt-4 text-base md:text-lg text-[var(--color-text)] leading-relaxed text-justify"
+          >
+            बेतन कर्णाली जलविद्युत आयोजना
+            <span class="font-bold text-[#047dd4]">४३९ मेगावाट</span> क्षमताको
+            <span class="font-bold text-gray-900"
+              >Peaking Run of River (PRoR)</span
+            >
+            प्रकारको नेपालकै एक गौरवशाली आयोजना हो। यो जलविद्युत संरचना
+            प्राकृतिक रूपमा समृद्ध कर्णाली प्रदेश अन्तर्गत सुर्खेत र अछाम
+            जिल्लाको सिमानामा अवस्थित छ।
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+          <div class="lg:col-span-5">
+            <div
+              class="relative h-full min-h-[420px] rounded overflow-hidden group"
+            >
+              <img
+                src="assets/images/landing.webp"
+                alt="Betan Karnali Hydropower Project"
+                class="h-full w-full object-cover group-hover:scale-105 transition duration-700"
+              />
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"
+              ></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-8">
+                <p class="text-white/80 text-sm mb-2">आयोजनाको प्रकार</p>
+                <h3 class="text-2xl font-bold text-white">
+                  पिकिङ रन-अफ-रिभर (PRoR)
+                </h3>
+
+                <div
+                  class="mt-6 inline-flex items-center gap-3 rounded bg-white/15 backdrop-blur-md px-5 py-3 text-white"
+                >
+                  <i class="fa-solid fa-bolt text-[var(--color-secondary)]"></i>
+                  <span class="font-semibold">४३९ मेगावाट क्षमता</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div class="project-info-card">
+                <div class="project-icon">
+                  <i class="fa-solid fa-industry"></i>
+                </div>
+                <p class="project-label">आयोजनाको नाम</p>
+                <h3 class="project-title">
+                  Betan Karnali Hydroelectricity Project
+                </h3>
+              </div>
+
+   
+              <div class="project-info-card">
+                <div class="project-icon">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <p class="project-label">क्षमता</p>
+                <h3 class="project-title">४३९ MW</h3>
+              </div>
+
+
+              <div class="project-info-card">
+                <div class="project-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <p class="project-label">स्थान</p>
+                <h3 class="project-title">
+                  कर्णाली प्रदेश, सुर्खेत र अछाम जिल्ला
+                </h3>
+              </div>
+
+   
+              <div class="project-info-card">
+                <div class="project-icon">
+                  <i class="fa-solid fa-water"></i>
+                </div>
+                <p class="project-label">जलाधार क्षेत्र</p>
+                <h3 class="project-title">२२,५११ km²</h3>
+              </div>
+
+              <div class="project-info-card">
+                <div class="project-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <p class="project-label">कुल ऊर्जा</p>
+                <h3 class="project-title">२२९९ GWh</h3>
+              </div>
+
+
+              <div class="project-info-card">
+                <div class="project-icon">
+                  <i class="fa-solid fa-tower-broadcast"></i>
+                </div>
+                <p class="project-label">प्रसारण लाइन</p>
+                <h3 class="project-title">५ km, Puchma Substation</h3>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 rounded bg-[var(--color-primary)] p-6 md:p-8 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+            >
+              <div>
+                <p class="text-white/80 text-sm mb-1">अनुमानित लागत</p>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">
+                  ७४ अर्ब रुपैयाँ (IDC बाहेक)
+                </h3>
+              </div>
+
+              <a href="projects.html" class="btn btn-secondary gap-3">
+                थप विवरण
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- project feature -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <!-- Header Section -->
+        <div class="text-center mb-12 space-y-2">
+          <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+            आयोजना मुख्य विशेषता
+          </h1>
+          <p class="text-sm md:text-base text-[var(--color-text)] font-medium">
+            प्राविधिक र रणनीतिक रूपमा सबल पक्षहरू
+          </p>
+        </div>
+
+        <!-- 3-Column Feature Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <!-- Card 1 -->
+          <div
+            class="bg-white shadow-sm border border-[var(--color-border)] rounded p-4 md:p-6 space-y-4 flex flex-col justify-between hover:-translate-y-2 duration-300 transition-transform"
+          >
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-[#e6f2fc] rounded- flex items-center justify-center text-[#047dd4]"
+              >
+                <i class="fa-solid fa-bolt text-lg"></i>
+              </div>
+
+              <h3 class="text-xl font-bold text-[#047dd4]">
+                अर्ध-जलाशययुक्त प्रविधि
+              </h3>
+
+              <p class="text-sm md:text-base text-[var(--color-text)]">
+                पिकिङ रन-अफ-रिभर (PROR) मोडेलमा आधारित यो आयोजनाले माग बढी भएको
+                समयमा पनि निरन्तर विद्युत प्रवाह गर्न सक्छ।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white shadow-sm border border-[var(--color-border)] rounded p-4 md:p-6 space-y-4 flex flex-col justify-between hover:-translate-y-2 duration-300 transition-transform"
+          >
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-[#e6f2fc] rounded flex items-center justify-center text-[#047dd4]"
+              >
+                <i class="fa-solid fa-users text-lg"></i>
+              </div>
+
+              <h3 class="text-xl font-bold text-[#047dd4]">
+                सञ्चयकर्ताहरूको अपनत्व
+              </h3>
+
+              <p class="text-sm md:text-base text-[var(--color-text)]">
+                करिब ६ लाख सञ्चयकर्ताहरूको प्रत्यक्ष लगानी रहेको नेपालकै ठूलो
+                जनसहभागितामूलक जलविद्युत आयोजना।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white shadow-sm border border-[var(--color-border)] rounded p-4 md:p-6 space-y-4 flex flex-col justify-between hover:-translate-y-2 duration-300 transition-transform"
+          >
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 bg-[#e6f2fc] rounded flex items-center justify-center text-[#047dd4]"
+              >
+                <i class="fa-solid fa-leaf text-lg"></i>
+              </div>
+
+              <h3 class="text-xl font-bold text-[#047dd4]">
+                न्यून वातावरणीय प्रभाव
+              </h3>
+
+              <p class="text-sm md:text-base text-[var(--color-text)]">
+                जैविक विविधता र स्थानीय बस्तीलाई न्यूनतम असर पर्ने गरी आधुनिक
+                वातावरणीय मापदण्डहरूको पालना।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news and notices -->
+    <section class="py-12 bg-[#e5e9eb]">
+      <div class="max-w-7xl mx-auto px-4 lg:px-0">
+        <!-- Header Section: Heading on Left, Tabs on Right -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8 border-b border-gray-300 pb-4"
+        >
+          <!-- Left: Title -->
+          <div class="border-l-[8px] border-[#047dd4] pl-4">
+            <h1 class="font-bold text-3xl text-[var(--color-primary)]">
+              सूचना तथा समाचार
+            </h1>
+          </div>
+
+          <!-- Right: Navigation Tabs -->
+          <div
+            class="flex flex-nowrap overflow-x-auto pb-1 gap-2 md:gap-3 no-scrollbar max-w-full"
+          >
+            <button
+              data-tab="all"
+              class="tab-btn whitespace-nowrap px-4 py-2 text-sm font-bold text-white bg-[#047dd4] rounded transition-all shadow-sm"
+            >
+              सबै
+            </button>
+
+            <button
+              data-tab="news"
+              class="tab-btn whitespace-nowrap px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#047dd4] hover:bg-white rounded transition-all"
+            >
+              मुख्य समाचार
+            </button>
+
+            <button
+              data-tab="notice"
+              class="tab-btn whitespace-nowrap px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#047dd4] hover:bg-white rounded transition-all"
+            >
+              सूचना तथा बोलपत्र
+            </button>
+
+            <button
+              data-tab="finance"
+              class="tab-btn whitespace-nowrap px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#047dd4] hover:bg-white rounded transition-all"
+            >
+              शेयर तथा वित्तीय
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 Column Grid for 6 List Items -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- Card 1  -->
+          <a
+            href="#"
+            data-category="notice"
+            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+          >
+            <div
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+            >
+              <span class="text-3xl font-extrabold text-[#047dd4]">२४</span>
+              <span
+                class="text-sm font-bold text-[var(--color-text)] tracking-wide mt-1"
+                >कार्तिक २०८२</span
+              >
+            </div>
+
+            <div class="flex flex-col justify-center p-4 pl-5">
+              <h2 class="text-lg font-semibold text-[#047dd4] line-clamp-1">
+                विद्युत खरिद सम्झौता (PPA) सम्बन्धी जानकारी
+              </h2>
+              <p
+                class="text-base text-[var(--color-text)] font-medium mt-1 line-clamp-1"
+              >
+                नेपाल विद्युत प्राधिकरणसँग हुने विद्युत खरिद सम्झौताको तयारी र
+                मस्यौदा...
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a
+            href="#"
+            data-category="news"
+            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+          >
+            <div
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+            >
+              <span class="text-3xl font-extrabold text-[#047dd4]">१8</span>
+              <span
+                class="text-sm font-bold text-[var(--color-text)] tracking-wide mt-1"
+                >मंसिर २०८२</span
+              >
+            </div>
+            <div class="flex flex-col justify-center p-4 pl-5">
+              <h2 class="text-lg font-semibold text-[#047dd4] line-clamp-1">
+                १५ औं वार्षिक साधारण सभा बस्ने सम्बन्धी अत्यन्त जरुरी सूचना
+              </h2>
+              <p
+                class="text-base text-[var(--color-text)] font-medium mt-1 line-clamp-1"
+              >
+                हाम्रो जलविद्युत कम्पनीको वार्षिक साधारण सभा निम्न विषयमा छलफल
+                गर्न बस्ने व्यहोरा...
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a
+            href="#"
+            data-category="news"
+            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+          >
+            <div
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+            >
+              <span class="text-3xl font-extrabold text-[#047dd4]">१०</span>
+              <span
+                class="text-sm font-bold text-[var(--color-text)] tracking-wide mt-1"
+                >पुस २०८२</span
+              >
+            </div>
+            <div class="flex flex-col justify-center p-4 pl-5">
+              <h2 class="text-lg font-semibold text-[#047dd4] line-clamp-1">
+                आयोजनाको बाँध क्षेत्र खन्ने कार्य सफलतापूर्वक सम्पन्न
+              </h2>
+              <p
+                class="text-base text-[var(--color-text)] font-medium mt-1 line-clamp-1"
+              >
+                सुरुङ निर्माण र गेयरहाउसको सिभिल संरचना ढलान कार्य तीब्र
+                गतिमा...
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a
+            href="#"
+            data-category="notice"
+            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+          >
+            <div
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+            >
+              <span class="text-3xl font-extrabold text-[#047dd4]">०५</span>
+              <span
+                class="text-sm font-bold text-[var(--color-text)] tracking-wide mt-1"
+                >माघ २०८२</span
+              >
+            </div>
+            <div class="flex flex-col justify-center p-4 pl-5">
+              <h2 class="text-lg font-semibold text-[#047dd4] line-clamp-1">
+                हेडवर्क्स तथा सुरुङ निर्माणका लागि नयाँ बोलपत्र आव्हान
+              </h2>
+              <p
+                class="text-base text-[var(--color-text)] font-medium mt-1 line-clamp-1"
+              >
+                इच्छुक इजाजतप्राप्त निर्माण कम्पनीहरूबाट रीतपूर्वकको सिलबन्दी
+                ठेक्का...
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a
+            href="#"
+            data-category="finance"
+            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+          >
+            <div
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+            >
+              <span class="text-3xl font-extrabold text-[#047dd4]">२८</span>
+              <span
+                class="text-sm font-bold text-[var(--color-text)] tracking-wide mt-1"
+                >फागुन २०८२</span
+              >
+            </div>
+            <div class="flex flex-col justify-center p-4 pl-5">
+              <h2 class="text-lg font-semibold text-[#047dd4] line-clamp-1">
+                प्रथम त्रैमासिक वित्तीय विवरण सार्वजनिक प्रतिवेदन
+              </h2>
+              <p
+                class="text-base text-[var(--color-text)] font-medium mt-1 line-clamp-1"
+              >
+                चालू आर्थिक वर्षको पहिलो तीन महिनाको आम्दानी, खर्च र नाफा
+                नोक्सान हिसाब...
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 6 -->
+          <a
+            href="#"
+            data-category="finance"
+            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+          >
+            <div
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+            >
+              <span class="text-3xl font-extrabold text-[#047dd4]">१२</span>
+              <span
+                class="text-sm font-bold text-[var(--color-text)] tracking-wide mt-1"
+                >चैत २०८२</span
+              >
+            </div>
+            <div class="flex flex-col justify-center p-4 pl-5">
+              <h2 class="text-lg font-semibold text-[#047dd4] line-clamp-1">
+                स्थानीय बासिन्दाहरूका लागि नियत सेयर बाँडफाँड तालिका
+              </h2>
+              <p
+                class="text-base text-[var(--color-text)] font-medium mt-1 line-clamp-1"
+              >
+                प्रभावित क्षेत्रका बासिन्दाहरूले बुझाएको प्राथमिक सेयर आवेदनको
+                नतिजा प्रकाशन...
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <!-- Top Header & Link Wrapper -->
+        <div class="flex justify-between items-end mb-8 pb-4">
+          <div class="border-l-[8px] border-[#047dd4] pl-4">
+            <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+              फोटो झलक
+            </h1>
+          </div>
+          <div>
+            <a
+              href="#"
+              class="text-[#047dd4] font-bold text-sm md:text-base border-b-2 border-[#047dd4] pb-1 hover:text-[#0369b3] hover:border-[#0369b3] transition-colors"
+            >
+              सबै हेर्नुहोस्
+            </a>
+          </div>
+        </div>
+
+        <!-- Asymmetric Photo Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <div
+            class="md:col-span-5 h-[300px] md:h-[500px] rounded overflow-hidden shadow-sm group relative"
+          >
+            <img
+              src="/assets/images/landing-hero.jpg"
+              alt="आयोजना स्थल बाँध निर्माण"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div
+              class="absolute left-0 bottom-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-black/65 text-white p-4"
+            >
+              <h3 class="font-bold text-2xl">आयोजना स्थल</h3>
+              <p class="text-base text-white/90 mt-1">
+                जलविद्युत आयोजनाको मुख्य बाँध तथा निर्माण क्षेत्रको दृश्य।
+              </p>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 flex flex-col gap-4">
+            <!-- Top Center Image -->
+            <div
+              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+            >
+              <img
+                src="/assets/images/img-4.jpeg"
+                alt="हाइड्रो टर्बाइन मेसिनरी"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <div
+                class="absolute left-0 bottom-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-black/65 text-white p-4"
+              >
+                <h3 class="font-bold text-lg">टर्बाइन मेसिनरी</h3>
+                <p class="text-sm text-white/90 mt-1">
+                  विद्युत उत्पादनका लागि प्रयोग हुने महत्वपूर्ण उपकरणहरू।
+                </p>
+              </div>
+            </div>
+
+            <!-- Bottom Center Image -->
+            <div
+              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+            >
+              <img
+                src="/assets/images/img-1.jpeg"
+                alt="कङ्क्रिट संरचना"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <div
+                class="absolute left-0 bottom-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-black/65 text-white p-4"
+              >
+                <h3 class="font-bold text-lg">कङ्क्रिट संरचना</h3>
+                <p class="text-sm text-white/90 mt-1">
+                  आयोजनाको स्थायी संरचना निर्माण कार्यको झलक।
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 flex flex-col gap-4">
+            <!-- Top Right Image -->
+            <div
+              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+            >
+              <img
+                src="/assets/images/img-2.jpeg"
+                alt="प्रसारण लाइन र सब-स्टेशन"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <div
+                class="absolute left-0 bottom-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-black/65 text-white p-4"
+              >
+                <h3 class="font-bold text-lg">प्रसारण लाइन</h3>
+                <p class="text-sm text-white/90 mt-1">
+                  उत्पादित विद्युत राष्ट्रिय प्रसारण प्रणालीमा जोड्ने संरचना।
+                </p>
+              </div>
+            </div>
+
+            <!-- Bottom Right Image -->
+            <div
+              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+            >
+              <img
+                src="/assets/images/img-3.jpeg"
+                alt="कन्ट्रोल रूम मोनिटरिङ"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <div
+                class="absolute left-0 bottom-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-black/65 text-white p-4"
+              >
+                <h3 class="font-bold text-lg">कन्ट्रोल रूम</h3>
+                <p class="text-sm text-white/90 mt-1">
+                  विद्युत उत्पादन तथा प्रणालीको निगरानी र नियन्त्रण कक्ष।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- usefull-links -->
+    <section class="py-12 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <div class="text-center mb-12 space-y-2">
+          <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+            सम्बद्ध संस्थाहरू
+          </h1>
+          <p class="text-sm md:text-base text-[var(--color-text)] font-medium">
+            सबल सहकार्य, समृद्ध जलविद्युतको साझा यात्रा
+          </p>
+        </div>
+        <div
+          class="border border-[var(--color-border)] rounded p-4 md:p-2 overflow-hidden"
+        >
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
+              <!-- First set -->
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/nepal-electricity-authority.png"
+                  alt="Nepal Electricity Authority"
+                />
+              </div>
+
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/Emblem-of-Nepal.png"
+                  alt="Emblem of Nepal"
+                />
+              </div>
+
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/vidut-company.png"
+                  alt="Vidyut Company"
+                />
+              </div>
+
+              <div class="marquee-item">
+                <img src="./assets/images/epf.svg" alt="EPF" />
+              </div>
+
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/department-of-electricity.png"
+                  alt="Department of Electricity"
+                />
+              </div>
+
+              <!-- Duplicate set for smooth infinite loop -->
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/nepal-electricity-authority.png"
+                  alt="Nepal Electricity Authority"
+                />
+              </div>
+
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/Emblem-of-Nepal.png"
+                  alt="Emblem of Nepal"
+                />
+              </div>
+
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/vidut-company.png"
+                  alt="Vidyut Company"
+                />
+              </div>
+
+              <div class="marquee-item">
+                <img src="./assets/images/epf.svg" alt="EPF" />
+              </div>
+
+              <div class="marquee-item">
+                <img
+                  src="./assets/images/department-of-electricity.png"
+                  alt="Department of Electricity"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-[var(--color-footer)] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0 py-10 md:py-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10"
+        >
+          <!-- Company Info -->
+          <div class="lg:col-span-5 sm:col-span-2">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">
+              बेतन कर्णाली हाइड्रोपावर
+            </h2>
+
+            <p class="text-white/80 leading-7 text-base md:text-lg">
+              बेतन कर्णाली सञ्चयकर्ता जलविद्युत कम्पनी लिमिटेड नेपालको ऊर्जा
+              क्षेत्रमा उत्कृष्टताका लागि प्रतिबद्ध छ, संस्थागत सहयोगमार्फत दिगो
+              शक्ति प्रदान गर्दै।
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">छिटो लिङ्कहरू</h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li>
+                <a href="index.html" class="hover:text-white transition"
+                  >गृहपृष्ठ</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-white transition"
+                  >हाम्रो बारेमा</a
+                >
+              </li>
+              <li>
+                <a href="projects.html" class="hover:text-white transition"
+                  >परियोजनाहरू</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="hover:text-white transition"
+                  >ग्यालरी</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-white transition"
+                  >सम्पर्क</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:col-span-3">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">
+              सम्पर्क गर्नुहोस्
+            </h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li class="flex items-start gap-3 md:gap-4">
+                <i class="fa-solid fa-map-marker-alt text-[#047dd4] mt-1"></i>
+                <span>मीनभवन, काठमाडौं, नेपाल</span>
+              </li>
+
+              <li class="flex items-start gap-3 md:gap-4">
+                <i class="fa-solid fa-phone text-[#047dd4] mt-1"></i>
+                <a
+                  href="tel:+9779800000000"
+                  class="hover:text-white transition"
+                >
+                  +९७७-१-XXXXXXX
+                </a>
+              </li>
+
+              <li class="flex items-start gap-3 md:gap-4 break-all">
+                <i class="fa-solid fa-envelope text-[#047dd4] mt-1"></i>
+                <a
+                  href="mailto:info@example.com"
+                  class="hover:text-white transition"
+                >
+                  info@bkshcl.com.np
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">सामाजिक सञ्जाल</h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-facebook text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">फेसबुक</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-x-twitter text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">ट्विटर</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-youtube text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">युट्युब</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-linkedin text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">लिङ्क्डइन</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10">
+        <div
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-3"
+        >
+          <p
+            class="text-sm md:text-base text-white/80 text-center md:text-left"
+          >
+            © २०२६ हाइड्रोपावर कम्पनी। सर्वाधिकार सुरक्षित।
+          </p>
+
+          <p
+            class="text-sm md:text-base text-white/80 flex flex-wrap items-center justify-center gap-2 text-center"
+          >
+            Developed by
+            <a href="#" class="inline-flex items-center">
+              <img
+                src="./assets/images/White Logo.png"
+                alt="कम्पनी लोगो"
+                class="h-7 md:h-8 w-auto object-contain"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>

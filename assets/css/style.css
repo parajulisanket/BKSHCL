@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Anek Devanagari", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+:root {
+  --color-primary: #047dd4;
+  --color-secondary: #fcfe04;
+  --color-white: #ffffff;
+  --color-title: #0b1f33;
+  --color-text: #44474d;
+  --color-bg: #ffffff;
+  --color-light-bg: #e5e9eb;
+  --color-border: #c5c6ce;
+  --color-black: #000000;
+  --color-btn-primary: #047dd4;
+  --color-btn-primary-hover: #0369b3;
+  --color-btn-secondary: #fcfe04;
+  --color-btn-secondary-hover: #e6e800;
+  --color-footer: #031a2b;
+}
+
+/* navbar css  */
+.nav-link {
+  position: relative;
+  padding: 28px 0;
+  color: var(--color-title);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 16px;
+  color: var(--color-title);
+  transition: all 0.3s ease;
+}
+
+.dropdown-link:hover {
+  background: var(--color-light-bg);
+  color: var(--color-primary);
+  padding-left: 20px;
+}
+
+.mobile-link {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-title);
+  transition: all 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: var(--color-primary);
+  padding-left: 6px;
+}
+
+.mobile-sub-link {
+  display: block;
+  padding: 10px 0;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.mobile-sub-link:hover {
+  color: var(--color-primary);
+  padding-left: 6px;
+}
+
+/* hero section */
+.hero-title {
+  font-size: 50px;
+  color: var(--color-white);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.hero-description {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* btns */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--color-btn-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-btn-primary-hover);
+}
+
+/* Secondary Button  */
+.btn-secondary {
+  background-color: var(--color-btn-secondary);
+  border: 1px solid var(--color-btn-secondary);
+  color: var(--color-black);
+}
+
+.btn-secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-btn-primary-hover);
+  border-color: var(--color-btn-primary-hover);
+}
+
+/*   आयोजना परिचय css */
+.project-info-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.project-info-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.project-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: var(--color-light-bg);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.project-label {
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-title);
+  line-height: 1.5;
+}
+
+/* merque section */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.marquee-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 768px) {
+  .marquee-track {
+    gap: 20px;
+    animation-duration: 18s;
+  }
+
+  .marquee-item {
+    width: 180px;
+    height: 90px;
+    padding: 12px;
+  }
+}
