@@ -3,6 +3,7 @@ const searchToggle = document.getElementById("searchToggle");
 const searchBox = document.getElementById("searchBox");
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenuClose = document.getElementById("mobileMenuClose");
 
 const mobileAboutToggle = document.getElementById("mobileAboutToggle");
 const mobileAboutDropdown = document.getElementById("mobileAboutDropdown");
@@ -39,25 +40,52 @@ if (searchToggle && searchBox) {
   });
 }
 
-// Mobile hamburger smooth open/close
+// Mobile full-screen overlay menu open/close
 if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener("click", function () {
-    const isOpen = mobileMenu.style.maxHeight !== "0px";
+  function openMobileMenu() {
+    mobileMenu.classList.remove(
+      "opacity-0",
+      "pointer-events-none",
+      "-translate-y-full",
+    );
 
-    if (isOpen) {
-      mobileMenu.style.maxHeight = "0px";
-      mobileMenu.classList.remove("opacity-100");
-      mobileMenu.classList.add("opacity-0");
+    mobileMenu.classList.add(
+      "opacity-100",
+      "pointer-events-auto",
+      "translate-y-0",
+    );
 
-      mobileMenuBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-    } else {
-      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-      mobileMenu.classList.remove("opacity-0");
-      mobileMenu.classList.add("opacity-100");
+    document.body.classList.add("overflow-hidden");
+  }
 
-      mobileMenuBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  function closeMobileMenu() {
+    mobileMenu.classList.remove(
+      "opacity-100",
+      "pointer-events-auto",
+      "translate-y-0",
+    );
+
+    mobileMenu.classList.add(
+      "opacity-0",
+      "pointer-events-none",
+      "-translate-y-full",
+    );
+
+    document.body.classList.remove("overflow-hidden");
+
+    if (mobileAboutDropdown && mobileAboutIcon) {
+      mobileAboutDropdown.style.maxHeight = "0px";
+      mobileAboutDropdown.classList.remove("opacity-100");
+      mobileAboutDropdown.classList.add("opacity-0");
+      mobileAboutIcon.classList.remove("rotate-180");
     }
-  });
+  }
+
+  mobileMenuBtn.addEventListener("click", openMobileMenu);
+
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener("click", closeMobileMenu);
+  }
 }
 
 // Mobile about dropdown smooth open/close
