@@ -71,17 +71,41 @@
                 >लगानीकर्ता विवरण</a
               >
             </li>
+            <!-- Dropdown -->
+            <li class="relative group">
+              <button type="button" class="nav-link flex items-center gap-1">
+                सञ्चार तथा प्रभाव
+                <span class="text-xs"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+
+              <ul
+                class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <li>
+                  <a href="/medai-and-news.html" class="dropdown-link"
+                    >समाचार तथा अपडेट</a
+                  >
+                </li>
+                <li>
+                  <a href="/gallery.html" class="dropdown-link">ग्यालेरी </a>
+                </li>
+                <li>
+                  <a href="/csr.html" class="dropdown-link">
+                    सामाजिक उत्तरदायित्व</a
+                  >
+                </li>
+                <li>
+                  <a href="/faq.html" class="dropdown-link">
+                    सोधिएका प्रश्नहरू</a
+                  >
+                </li>
+              </ul>
+            </li>
 
             <li>
               <a href="documents.html" class="nav-link">कागजात</a>
-            </li>
-
-            <li>
-              <a href="gallery.html" class="nav-link">ग्यालरी</a>
-            </li>
-
-            <li>
-              <a href="csr.html" class="nav-link">CSR</a>
             </li>
 
             <li>
@@ -144,7 +168,7 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
-            <!-- Mobile Search -->
+
             <div class="mb-4">
               <div class="relative">
                 <input
@@ -164,22 +188,20 @@
             <ul class="space-y-4 text-sm font-medium text-[var(--color-title)]">
               <li><a href="index.html" class="mobile-link">गृहपृष्ठ</a></li>
 
-              <li>
+              <!-- Dropdown 1: हाम्रो बारेमा -->
+              <li class="mobile-dropdown-container">
                 <button
-                  id="mobileAboutToggle"
                   type="button"
-                  class="mobile-link w-full flex items-center justify-between"
+                  class="mobile-dropdown-toggle mobile-link w-full flex items-center justify-between"
                 >
                   <span>हाम्रो बारेमा</span>
                   <i
-                    id="mobileAboutIcon"
-                    class="fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                    class="mobile-dropdown-icon fa-solid fa-chevron-down text-xs transition-transform duration-300"
                   ></i>
                 </button>
 
                 <ul
-                  id="mobileAboutDropdown"
-                  class="overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  class="mobile-dropdown overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
                   style="max-height: 0px"
                 >
                   <li>
@@ -190,7 +212,9 @@
                   <li>
                     <a href="message.html" class="mobile-sub-link">सन्देश</a>
                   </li>
-                  <li><a href="team.html" class="mobile-sub-link">टिम</a></li>
+                  <li>
+                    <a href="team.html" class="mobile-sub-link">टिम</a>
+                  </li>
                 </ul>
               </li>
 
@@ -201,8 +225,44 @@
                 >
               </li>
               <li><a href="documents.html" class="mobile-link">कागजात</a></li>
-              <li><a href="gallery.html" class="mobile-link">ग्यालरी</a></li>
-              <li><a href="csr.html" class="mobile-link">CSR</a></li>
+
+              <!-- Dropdown 2: सञ्चार तथा प्रभाव -->
+              <li class="mobile-dropdown-container">
+                <button
+                  type="button"
+                  class="mobile-dropdown-toggle mobile-link w-full flex items-center justify-between"
+                >
+                  <span>सञ्चार तथा प्रभाव</span>
+                  <i
+                    class="mobile-dropdown-icon fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                  ></i>
+                </button>
+
+                <ul
+                  class="mobile-dropdown overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  style="max-height: 0px"
+                >
+                  <li>
+                    <a href="media-and-news.html" class="mobile-sub-link"
+                      >समाचार तथा अपडेट</a
+                    >
+                  </li>
+                  <li>
+                    <a href="gallery.html" class="mobile-sub-link">ग्यालेरी</a>
+                  </li>
+                  <li>
+                    <a href="csr.html" class="mobile-sub-link"
+                      >सामाजिक उत्तरदायित्व (CSR)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="faq.html" class="mobile-sub-link"
+                      >सोधिएका प्रश्नहरू (FAQs)</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
               <li><a href="contact.html" class="mobile-link">सम्पर्क</a></li>
             </ul>
           </div>
@@ -399,72 +459,63 @@
 
         <!-- contentn -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div class="rounded">
-            <div class="h-[400px] w-auto">
-              <img
-                src="./assets/images/dummy-1.avif"
-                class="h-full w-full object-cover border border-[var(--color-border)]"
-                alt=""
-              />
-            </div>
-            <div class="text-center py-2">
-              <h1 class="font-bold text-2xl text-[var(--color-primary)]">
-                Name 1
-              </h1>
-              <p class="font-semibold text-xl text-[var(--color-text)]">
-                अध्यक्ष
-              </p>
+          <div class="relative overflow-hidden h-[400px]">
+            <img
+              src="./assets/images/dummy-1.avif"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <div
+              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
+            >
+              <h1 class="font-bold text-2xl text-white">Name 1</h1>
+              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
             </div>
           </div>
-          <div class="rounded">
-            <div class="h-[400px] w-auto">
-              <img
-                src="./assets/images/dummy-2.jpeg"
-                class="h-full w-full object-cover border border-[var(--color-border)]"
-                alt=""
-              />
-            </div>
-            <div class="text-center py-2">
-              <h1 class="font-bold text-2xl text-[var(--color-primary)]">
-                Name 1
-              </h1>
-              <p class="font-semibold text-xl text-[var(--color-text)]">
-                अध्यक्ष
-              </p>
+
+          <div class="relative overflow-hidden h-[400px]">
+            <img
+              src="./assets/images/dummy-2.jpeg"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <div
+              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 to-transparent text-center p-4"
+            >
+              <h1 class="font-bold text-2xl text-white">Name 1</h1>
+              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
             </div>
           </div>
-          <div class="rounded">
-            <div class="h-[400px] w-auto">
-              <img
-                src="./assets/images/dummy-1.avif"
-                class="h-full w-full object-cover border border-[var(--color-border)]"
-                alt=""
-              />
-            </div>
-            <div class="text-center py-2">
-              <h1 class="font-bold text-2xl text-[var(--color-primary)]">
-                Name 1
-              </h1>
-              <p class="font-semibold text-xl text-[var(--color-text)]">
-                अध्यक्ष
-              </p>
+
+          <div class="relative overflow-hidden h-[400px]">
+            <img
+              src="./assets/images/dummy-1.avif"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <div
+              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
+            >
+              <h1 class="font-bold text-2xl text-white">Name 1</h1>
+              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
             </div>
           </div>
-          <div class="rounded">
-            <div class="h-[400px] w-auto">
-              <img
-                src="./assets/images/dummy-2.jpeg"
-                class="h-full w-full object-cover border border-[var(--color-border)]"
-                alt=""
-              />
-            </div>
-            <div class="text-center py-2">
-              <h1 class="font-bold text-2xl text-[var(--color-primary)]">
-                Name 1
-              </h1>
-              <p class="font-semibold text-xl text-[var(--color-text)]">
-                अध्यक्ष
-              </p>
+
+          <div class="relative overflow-hidden h-[400px]">
+            <img
+              src="./assets/images/dummy-2.jpeg"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+
+            <div
+              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
+            >
+              <h1 class="font-bold text-2xl text-white">Name 1</h1>
+              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
             </div>
           </div>
         </div>

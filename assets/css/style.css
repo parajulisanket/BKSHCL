@@ -11,6 +11,7 @@ body {
   font-family: "Anek Devanagari", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -251,4 +252,76 @@ body {
     height: 90px;
     padding: 12px;
   }
+}
+
+/* faq section css */
+.faq-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  font-weight: 600;
+  color: #1f2937;
+  border-left: 4px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.faq-nav:hover,
+.faq-nav.active {
+  background: #e9eef7;
+  color: #031632;
+  border-left-color: #031632;
+}
+
+.faq-question {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  background: #ffffff;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 20px;
+}
+
+.faq-answer p {
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-icon {
+  font-size: medium;
+  transition: transform 0.25s ease;
+}
+
+/*  media and nes */
+.news-card {
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
 }

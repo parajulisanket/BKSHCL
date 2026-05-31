@@ -79,17 +79,41 @@
                 >लगानीकर्ता विवरण</a
               >
             </li>
+            <!-- Dropdown -->
+            <li class="relative group">
+              <button type="button" class="nav-link flex items-center gap-1">
+                सञ्चार तथा प्रभाव
+                <span class="text-xs"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+
+              <ul
+                class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <li>
+                  <a href="/medai-and-news.html" class="dropdown-link"
+                    >समाचार तथा अपडेट</a
+                  >
+                </li>
+                <li>
+                  <a href="/gallery.html" class="dropdown-link">ग्यालेरी </a>
+                </li>
+                <li>
+                  <a href="/csr.html" class="dropdown-link">
+                    सामाजिक उत्तरदायित्व</a
+                  >
+                </li>
+                <li>
+                  <a href="/faq.html" class="dropdown-link">
+                    सोधिएका प्रश्नहरू</a
+                  >
+                </li>
+              </ul>
+            </li>
 
             <li>
               <a href="documents.html" class="nav-link">कागजात</a>
-            </li>
-
-            <li>
-              <a href="gallery.html" class="nav-link">ग्यालरी</a>
-            </li>
-
-            <li>
-              <a href="csr.html" class="nav-link">CSR</a>
             </li>
 
             <li>
@@ -152,7 +176,7 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
-            <!-- Mobile Search -->
+
             <div class="mb-4">
               <div class="relative">
                 <input
@@ -172,22 +196,20 @@
             <ul class="space-y-4 text-sm font-medium text-[var(--color-title)]">
               <li><a href="index.html" class="mobile-link">गृहपृष्ठ</a></li>
 
-              <li>
+              <!-- Dropdown 1: हाम्रो बारेमा -->
+              <li class="mobile-dropdown-container">
                 <button
-                  id="mobileAboutToggle"
                   type="button"
-                  class="mobile-link w-full flex items-center justify-between"
+                  class="mobile-dropdown-toggle mobile-link w-full flex items-center justify-between"
                 >
                   <span>हाम्रो बारेमा</span>
                   <i
-                    id="mobileAboutIcon"
-                    class="fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                    class="mobile-dropdown-icon fa-solid fa-chevron-down text-xs transition-transform duration-300"
                   ></i>
                 </button>
 
                 <ul
-                  id="mobileAboutDropdown"
-                  class="overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  class="mobile-dropdown overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
                   style="max-height: 0px"
                 >
                   <li>
@@ -198,7 +220,9 @@
                   <li>
                     <a href="message.html" class="mobile-sub-link">सन्देश</a>
                   </li>
-                  <li><a href="team.html" class="mobile-sub-link">टिम</a></li>
+                  <li>
+                    <a href="team.html" class="mobile-sub-link">टिम</a>
+                  </li>
                 </ul>
               </li>
 
@@ -209,8 +233,44 @@
                 >
               </li>
               <li><a href="documents.html" class="mobile-link">कागजात</a></li>
-              <li><a href="gallery.html" class="mobile-link">ग्यालरी</a></li>
-              <li><a href="csr.html" class="mobile-link">CSR</a></li>
+
+              <!-- Dropdown 2: सञ्चार तथा प्रभाव -->
+              <li class="mobile-dropdown-container">
+                <button
+                  type="button"
+                  class="mobile-dropdown-toggle mobile-link w-full flex items-center justify-between"
+                >
+                  <span>सञ्चार तथा प्रभाव</span>
+                  <i
+                    class="mobile-dropdown-icon fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                  ></i>
+                </button>
+
+                <ul
+                  class="mobile-dropdown overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  style="max-height: 0px"
+                >
+                  <li>
+                    <a href="media-and-news.html" class="mobile-sub-link"
+                      >समाचार तथा अपडेट</a
+                    >
+                  </li>
+                  <li>
+                    <a href="gallery.html" class="mobile-sub-link">ग्यालेरी</a>
+                  </li>
+                  <li>
+                    <a href="csr.html" class="mobile-sub-link"
+                      >सामाजिक उत्तरदायित्व (CSR)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="faq.html" class="mobile-sub-link"
+                      >सोधिएका प्रश्नहरू (FAQs)</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
               <li><a href="contact.html" class="mobile-link">सम्पर्क</a></li>
             </ul>
           </div>
@@ -933,7 +993,7 @@
           <a
             href="#"
             data-category="notice"
-            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+            class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
               class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
@@ -962,7 +1022,7 @@
           <a
             href="#"
             data-category="news"
-            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+            class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
               class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
@@ -990,7 +1050,7 @@
           <a
             href="#"
             data-category="news"
-            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+            class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
               class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
@@ -1018,7 +1078,7 @@
           <a
             href="#"
             data-category="notice"
-            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+            class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
               class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
@@ -1046,7 +1106,7 @@
           <a
             href="#"
             data-category="finance"
-            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+            class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
               class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
@@ -1074,7 +1134,7 @@
           <a
             href="#"
             data-category="finance"
-            class="news-card flex items-stretch bg-white border border-[var(--color-border)] shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
+            class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
               class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
@@ -1104,6 +1164,13 @@
     <!-- gallery -->
     <section class="py-12">
       <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <!-- Hidden filter button only to support existing JS -->
+        <button
+          type="button"
+          class="gallery-filter hidden"
+          data-filter="all"
+        ></button>
+
         <!-- Top Header & Link Wrapper -->
         <div class="flex justify-between items-end mb-8 pb-4">
           <div class="border-l-[8px] border-[#047dd4] pl-4">
@@ -1111,6 +1178,7 @@
               फोटो झलक
             </h1>
           </div>
+
           <div>
             <a
               href="#"
@@ -1123,8 +1191,11 @@
 
         <!-- Asymmetric Photo Grid Layout -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <!-- Large Left Image -->
           <div
-            class="md:col-span-5 h-[300px] md:h-[500px] rounded overflow-hidden shadow-sm group relative"
+            class="gallery-item md:col-span-5 h-[300px] md:h-[500px] overflow-hidden shadow-sm group relative cursor-pointer"
+            data-category="all"
+            data-img="/assets/images/landing-hero.jpg"
           >
             <img
               src="/assets/images/landing-hero.jpg"
@@ -1142,10 +1213,12 @@
             </div>
           </div>
 
+          <!-- Center Column -->
           <div class="md:col-span-3 flex flex-col gap-4">
-            <!-- Top Center Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-4.jpeg"
             >
               <img
                 src="/assets/images/img-4.jpeg"
@@ -1163,9 +1236,10 @@
               </div>
             </div>
 
-            <!-- Bottom Center Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-1.jpeg"
             >
               <img
                 src="/assets/images/img-1.jpeg"
@@ -1184,10 +1258,12 @@
             </div>
           </div>
 
+          <!-- Right Column -->
           <div class="md:col-span-4 flex flex-col gap-4">
-            <!-- Top Right Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-2.jpeg"
             >
               <img
                 src="/assets/images/img-2.jpeg"
@@ -1205,9 +1281,10 @@
               </div>
             </div>
 
-            <!-- Bottom Right Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-3.jpeg"
             >
               <img
                 src="/assets/images/img-3.jpeg"
@@ -1228,6 +1305,43 @@
         </div>
       </div>
     </section>
+
+    <!-- Lightbox -->
+    <div
+      id="galleryLightbox"
+      class="fixed inset-0 z-[9999] bg-black/95 hidden items-center justify-center px-4"
+    >
+      <button
+        id="closeLightbox"
+        type="button"
+        class="absolute top-5 right-5 w-12 h-12 bg-white text-black flex items-center justify-center hover:bg-[#047dd4] hover:text-white transition"
+      >
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <button
+        id="prevImage"
+        type="button"
+        class="absolute left-4 md:left-8 w-12 h-12 bg-white/90 text-black flex items-center justify-center hover:bg-[#047dd4] hover:text-white transition"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <img
+        id="lightboxImage"
+        src=""
+        alt="Gallery Preview"
+        class="max-w-5xl w-full max-h-[85vh] object-contain"
+      />
+
+      <button
+        id="nextImage"
+        type="button"
+        class="absolute right-4 md:right-8 w-12 h-12 bg-white/90 text-black flex items-center justify-center hover:bg-[#047dd4] hover:text-white transition"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
 
     <!-- usefull-links -->
     <section class="py-12 overflow-hidden">
@@ -1450,7 +1564,7 @@
               <img
                 src="./assets/images/White Logo.png"
                 alt="कम्पनी लोगो"
-                class="h-7  w-auto object-contain"
+                class="h-7 w-auto object-contain"
               />
             </a>
           </p>
@@ -1461,5 +1575,6 @@
     <!-- scripts -->
     <script src="./assets/scripts/menu.js"></script>
     <script src="./assets/scripts/index.js"></script>
+    <script src="./assets/scripts/gallery.js"></script>
   </body>
 </html>

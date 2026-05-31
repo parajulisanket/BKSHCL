@@ -5,15 +5,10 @@ const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileMenuClose = document.getElementById("mobileMenuClose");
 
-const mobileAboutToggle = document.getElementById("mobileAboutToggle");
-const mobileAboutDropdown = document.getElementById("mobileAboutDropdown");
-const mobileAboutIcon = document.getElementById("mobileAboutIcon");
-
 // Desktop search open/close
 if (searchToggle && searchBox) {
   searchToggle.addEventListener("click", function () {
     const isOpen = searchBox.classList.contains("opacity-100");
-
     if (isOpen) {
       searchBox.classList.remove(
         "opacity-100",
@@ -33,7 +28,6 @@ if (searchToggle && searchBox) {
         "scale-100",
         "pointer-events-auto",
       );
-
       const input = searchBox.querySelector("input");
       if (input) input.focus();
     }
@@ -48,13 +42,11 @@ if (mobileMenuBtn && mobileMenu) {
       "pointer-events-none",
       "-translate-y-full",
     );
-
     mobileMenu.classList.add(
       "opacity-100",
       "pointer-events-auto",
       "translate-y-0",
     );
-
     document.body.classList.add("overflow-hidden");
   }
 
@@ -64,53 +56,58 @@ if (mobileMenuBtn && mobileMenu) {
       "pointer-events-auto",
       "translate-y-0",
     );
-
     mobileMenu.classList.add(
       "opacity-0",
       "pointer-events-none",
       "-translate-y-full",
     );
-
     document.body.classList.remove("overflow-hidden");
 
-    if (mobileAboutDropdown && mobileAboutIcon) {
-      mobileAboutDropdown.style.maxHeight = "0px";
-      mobileAboutDropdown.classList.remove("opacity-100");
-      mobileAboutDropdown.classList.add("opacity-0");
-      mobileAboutIcon.classList.remove("rotate-180");
-    }
+    // Automatically reset ALL generic mobile dropdowns when mobile menu closes
+    document.querySelectorAll(".mobile-dropdown").forEach((dropdown) => {
+      dropdown.style.maxHeight = "0px";
+      dropdown.classList.remove("opacity-100");
+      dropdown.classList.add("opacity-0");
+    });
+    document.querySelectorAll(".mobile-dropdown-icon").forEach((icon) => {
+      icon.classList.remove("rotate-180");
+    });
   }
 
   mobileMenuBtn.addEventListener("click", openMobileMenu);
-
   if (mobileMenuClose) {
     mobileMenuClose.addEventListener("click", closeMobileMenu);
   }
 }
 
-// Mobile about dropdown smooth open/close
-if (mobileAboutToggle && mobileAboutDropdown && mobileAboutIcon) {
-  mobileAboutToggle.addEventListener("click", function () {
-    const isOpen = mobileAboutDropdown.style.maxHeight !== "0px";
+// ==========================================
+// NEW GENERIC MOBILE DROPDOWN SCRIPT
+// ==========================================
+document.querySelectorAll(".mobile-dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", function () {
+    // Find the closest wrapper container to look inside
+    const container = this.closest(".mobile-dropdown-container");
+    if (!container) return;
+
+    // Find the specific dropdown menu and icon inside this container
+    const dropdown = container.querySelector(".mobile-dropdown");
+    const icon = container.querySelector(".mobile-dropdown-icon");
+
+    if (!dropdown) return;
+
+    const isOpen =
+      dropdown.style.maxHeight && dropdown.style.maxHeight !== "0px";
 
     if (isOpen) {
-      mobileAboutDropdown.style.maxHeight = "0px";
-      mobileAboutDropdown.classList.remove("opacity-100");
-      mobileAboutDropdown.classList.add("opacity-0");
-      mobileAboutIcon.classList.remove("rotate-180");
+      dropdown.style.maxHeight = "0px";
+      dropdown.classList.remove("opacity-100");
+      dropdown.classList.add("opacity-0");
+      if (icon) icon.classList.remove("rotate-180");
     } else {
-      mobileAboutDropdown.style.maxHeight =
-        mobileAboutDropdown.scrollHeight + "px";
-
-      mobileAboutDropdown.classList.remove("opacity-0");
-      mobileAboutDropdown.classList.add("opacity-100");
-      mobileAboutIcon.classList.add("rotate-180");
-
-      setTimeout(function () {
-        if (mobileMenu.style.maxHeight !== "0px") {
-          mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-        }
-      }, 300);
+      dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+      dropdown.classList.remove("opacity-0");
+      dropdown.classList.add("opacity-100");
+      if (icon) icon.classList.add("rotate-180");
     }
   });
-}
+});
