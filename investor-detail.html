@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favico.jpg" type="image/png" />
+    <title>BKSHCL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <header class="sticky top-0 z-50 bg-[var(--color-bg)] shadow">
+      <nav class="max-w-[98rem] mx-auto px-4 md:px-0">
+        <div class="flex items-center justify-between h-20">
+          <!-- Left Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/logo-main.gif"
+              alt="BKSHCL Logo"
+              class="h-14 w-auto"
+            />
+          </a>
+
+          <!-- Center Nav Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-8 text-md font-medium text-[var(--color-title)]"
+          >
+            <li>
+              <a href="index.html" class="nav-link">गृहपृष्ठ</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="relative group">
+              <button type="button" class="nav-link flex items-center gap-1">
+                हाम्रो बारेमा
+                <span class="text-xs"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+
+              <ul
+                class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <li>
+                  <a href="/about-us.html" class="dropdown-link"
+                    >हाम्रो बारेमा</a
+                  >
+                </li>
+                <li>
+                  <a href="message.html" class="dropdown-link"
+                    >नेतृत्वको सन्देश</a
+                  >
+                </li>
+                <li>
+                  <a href="team.html" class="dropdown-link">टिम</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="projects.html" class="nav-link">आयोजना</a>
+            </li>
+
+            <li>
+              <a href="investor-detail.html" class="nav-link"
+                >लगानीकर्ता विवरण</a
+              >
+            </li>
+
+            <li>
+              <a href="documents.html" class="nav-link">कागजात</a>
+            </li>
+
+            <li>
+              <a href="gallery.html" class="nav-link">ग्यालरी</a>
+            </li>
+
+            <li>
+              <a href="csr.html" class="nav-link">CSR</a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="nav-link">सम्पर्क</a>
+            </li>
+          </ul>
+
+          <!-- Right Search -->
+          <div class="relative flex items-center gap-3">
+            <div
+              id="searchBox"
+              class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 opacity-0 scale-95 pointer-events-none transition-all duration-300"
+            >
+              <input
+                type="text"
+                placeholder="खोज्नुहोस्..."
+                class="w-56 px-4 py-2 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)]"
+              />
+            </div>
+
+            <button
+              id="searchToggle"
+              class="hidden lg:flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)] hover:bg-[var(--color-primary)] hover:text-white transition duration-300"
+              type="button"
+              aria-label="Search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobileMenuBtn"
+              class="lg:hidden h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+              type="button"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="lg:hidden fixed inset-0 z-[999] bg-white opacity-0 pointer-events-none -translate-y-full transition-all duration-500 ease-in-out overflow-y-auto"
+        >
+          <div class="min-h-screen px-4 pb-8 pt-5 bg-white">
+            <div class="flex items-center justify-between mb-6">
+              <img
+                src="assets/images/logo-main.gif"
+                alt="BKSHCL Logo"
+                class="h-14 w-auto"
+              />
+
+              <button
+                id="mobileMenuClose"
+                class="h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+                type="button"
+                aria-label="Close menu"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <!-- Mobile Search -->
+            <div class="mb-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="खोज्नुहोस्..."
+                  class="w-full px-4 py-3 pr-11 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)] transition"
+                />
+                <button
+                  type="button"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-title)] hover:text-[var(--color-primary)] transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+
+            <ul class="space-y-4 text-sm font-medium text-[var(--color-title)]">
+              <li><a href="index.html" class="mobile-link">गृहपृष्ठ</a></li>
+
+              <li>
+                <button
+                  id="mobileAboutToggle"
+                  type="button"
+                  class="mobile-link w-full flex items-center justify-between"
+                >
+                  <span>हाम्रो बारेमा</span>
+                  <i
+                    id="mobileAboutIcon"
+                    class="fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                  ></i>
+                </button>
+
+                <ul
+                  id="mobileAboutDropdown"
+                  class="overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  style="max-height: 0px"
+                >
+                  <li>
+                    <a href="about.html" class="mobile-sub-link"
+                      >हाम्रो बारेमा</a
+                    >
+                  </li>
+                  <li>
+                    <a href="message.html" class="mobile-sub-link">सन्देश</a>
+                  </li>
+                  <li><a href="team.html" class="mobile-sub-link">टिम</a></li>
+                </ul>
+              </li>
+
+              <li><a href="projects.html" class="mobile-link">आयोजना</a></li>
+              <li>
+                <a href="investor-detail.html" class="mobile-link"
+                  >लगानीकर्ता विवरण</a
+                >
+              </li>
+              <li><a href="documents.html" class="mobile-link">कागजात</a></li>
+              <li><a href="gallery.html" class="mobile-link">ग्यालरी</a></li>
+              <li><a href="csr.html" class="mobile-link">CSR</a></li>
+              <li><a href="contact.html" class="mobile-link">सम्पर्क</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div
+      class="relative max-w-7xl mx-auto my-6 bg-cover bg-center bg-no-repeat h-[350px] flex items-end px-6 md:px-10 pb-8"
+      style="background-image: url(&quot;assets/images/breadcrums.webp&quot;)"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
+      ></div>
+
+      <div class="relative z-10 flex flex-col gap-1.5 w-full">
+        <h1 class="text-2xl md:text-5xl font-bold text-white tracking-wide">
+          लगानीकर्ता सम्बन्ध
+        </h1>
+
+        <p class="text-xs md:text-lg text-white font-normal">
+          पारदर्शी सुशासन र शेयरधनीहरूको दिगो विकासका माध्यमबाट नेपालको ऊर्जा
+          भविष्य निर्माण गर्दै।
+        </p>
+      </div>
+    </div>
+
+    <!-- Financial Indicators Section -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 md:px-0 space-y-8">
+        <!-- Header Section -->
+        <div class="text-center space-y-2">
+          <h1
+            class="font-bold text-3xl md:text-4xl block text-[var(--color-primary)]"
+          >
+            वित्तीय सूचकहरू
+          </h1>
+          <p class="text-sm md:text-base text-[var(--color-text)] font-medium">
+            आयोजनाको लागत, प्रतिफल र आर्थिक सूचकहरूको विवरण
+          </p>
+        </div>
+
+        <!-- Main Financial Summary -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Left Featured Cost Card -->
+          <div class="lg:col-span-4 flex">
+            <div
+              class="w-full h-full bg-[var(--color-primary)] text-white p-8 md:p-10 relative overflow-hidden flex flex-col justify-between"
+            >
+              <div class="relative z-10">
+                <div
+                  class="w-16 h-16 bg-white/15 flex items-center justify-center text-3xl mb-8"
+                >
+                  <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+
+                <p class="text-white/80 text-base font-medium mb-3">
+                  Estimated Project Cost
+                </p>
+
+                <h2 class="text-2xl md:text-4xl font-bold leading-tight">
+                  NPR 74,151
+                </h2>
+
+                <p class="text-xl md:text-2xl font-semibold mt-2">Million</p>
+
+                <div class="mt-8 pt-6 border-t border-white/20">
+                  <p class="text-white/80 text-base">Equivalent Cost</p>
+                  <p class="text-2xl font-bold mt-1">$623.12 Million</p>
+                </div>
+
+                <div
+                  class="mt-8 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm"
+                >
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span>1 USD = NPR 119</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Indicator Cards -->
+          <div class="lg:col-span-8">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 h-full"
+            >
+              <!-- Card 1 -->
+              <div
+                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div
+                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
+                  >
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
+                  >
+                    IRR
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
+                    Project IRR
+                  </h3>
+                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
+                    12.73%
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div
+                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
+                  >
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
+                  >
+                    Economic
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
+                    Economic IRR
+                  </h3>
+                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
+                    17.01%
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div
+                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
+                  >
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
+                  >
+                    Interest
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
+                    Loan Interest Rate
+                  </h3>
+                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
+                    11%
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div
+                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
+                  >
+                    <i class="fa-solid fa-scale-balanced"></i>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
+                  >
+                    Ratio
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
+                    Debt Equity Ratio
+                  </h3>
+                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
+                    70:30
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div
+                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div
+                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
+                  >
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
+                  >
+                    DSCR
+                  </span>
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
+                    DSCR
+                  </h3>
+                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
+                    1.53
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div
+                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div
+                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
+                  >
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
+                  >
+                    B/C
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
+                    Benefit Cost Ratio
+                  </h3>
+                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
+                    1.28
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Wide Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+          <!-- NPV Card -->
+          <div
+            class="md:col-span-1 bg-white p-6 border border-[var(--color-border)]"
+          >
+            <div class="flex items-center gap-4 mb-5">
+              <div
+                class="w-12 h-12 bg-[var(--color-primary)] text-[var(--color-secondary)] flex items-center justify-center text-xl"
+              >
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-[var(--color-title)]">NPV</h3>
+                <p class="text-sm text-[var(--color-text)]">
+                  10% Discount Rate
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="text-3xl font-bold text-[var(--color-title)]">
+                  24,900
+                </p>
+                <p class="text-sm text-[var(--color-text)]">Million NPR</p>
+              </div>
+
+              <div class="border-t border-gray-200 pt-4">
+                <p class="text-3xl font-bold text-[var(--color-title)]">
+                  209.24
+                </p>
+                <p class="text-sm text-[var(--color-text)]">Million USD</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payback Period Card -->
+          <div
+            class="bg-white p-6 border border-[var(--color-border)] flex flex-col justify-between"
+          >
+            <div class="flex items-center gap-4 mb-5">
+              <div
+                class="w-12 h-12 bg-[var(--color-primary)] text-[var(--color-secondary)] flex items-center justify-center text-xl"
+              >
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-[var(--color-title)]">
+                  Pay-back Period
+                </h3>
+                <p class="text-sm text-[var(--color-text)]">Normal period</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-5xl font-bold text-[var(--color-primary)]">6.24</p>
+              <p class="text-sm text-[var(--color-text)] mt-2">Years</p>
+            </div>
+          </div>
+
+          <!-- Discounted Payback Period Card -->
+          <div
+            class="bg-white p-6 border border-[var(--color-border)] flex flex-col justify-between"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 bg-[var(--color-primary)] text-[var(--color-secondary)] flex items-center justify-center text-xl"
+              >
+                <i class="fa-solid fa-business-time"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-[var(--color-title)]">
+                  Discounted Pay-back
+                </h3>
+                <p class="text-sm text-[var(--color-text)]">
+                  Discounted period
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-5xl font-bold text-[var(--color-primary)]">9.53</p>
+              <p class="text-sm text-[var(--color-text)] mt-1">Years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capital Structure Section -->
+    <section class="py-12 bg-[var(--color-light-bg)]">
+      <div class="max-w-7xl mx-auto px-4 md:px-0 space-y-8">
+        <!-- Header -->
+        <div class="border-l-[8px] border-[#047dd4] pl-4">
+          <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+            पूँजी संरचना
+          </h1>
+        </div>
+
+        <!-- Desktop Table -->
+        <div
+          class="hidden md:block bg-white border border-[var(--color-border)] overflow-hidden"
+        >
+          <div class="overflow-x-auto">
+            <table class="min-w-full">
+              <thead class="bg-[#f5f9ff] border-b border-[var(--color-border)]">
+                <tr>
+                  <th
+                    class="px-7 py-5 text-left text-xl font-bold text-[var(--color-primary)]"
+                  >
+                    शेयरधनी समूह
+                  </th>
+                  <th
+                    class="px-7 py-5 text-left text-xl font-bold text-[var(--color-primary)]"
+                  >
+                    शेयर संख्या
+                  </th>
+                  <th
+                    class="px-7 py-5 text-left text-xl font-bold text-[var(--color-primary)]"
+                  >
+                    स्वामित्व (%)
+                  </th>
+                  <th
+                    class="px-7 py-5 text-left text-xl font-bold text-[var(--color-primary)]"
+                  >
+                    अवस्था
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-[var(--color-border)]">
+                <tr class="hover:bg-gray-50 transition">
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-semibold"
+                  >
+                    कर्मचारी सञ्चय कोष (EPF)
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    ४,००,००,०००
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    ४०.०%
+                  </td>
+                  <td class="px-7 py-6">
+                    <span
+                      class="inline-flex items-center px-4 py-2 text-sm font-semibold bg-gray-200 text-[var(--color-text)] rounded-full"
+                    >
+                      सक्रिय
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-50 transition">
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-semibold"
+                  >
+                    नेपाल विद्युत प्राधिकरण (NEA)
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    १,००,००,०००
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    १०.०%
+                  </td>
+                  <td class="px-7 py-6">
+                    <span
+                      class="inline-flex items-center px-4 py-2 text-sm font-semibold bg-gray-200 text-[var(--color-text)] rounded-full"
+                    >
+                      सक्रिय
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-50 transition">
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-semibold"
+                  >
+                    सर्वसाधारण
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    १,५०,००,०००
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    १५.०%
+                  </td>
+                  <td class="px-7 py-6">
+                    <span
+                      class="inline-flex items-center px-4 py-2 text-sm font-semibold bg-gray-200 text-[var(--color-text)] rounded-full"
+                    >
+                      कारोबार योग्य
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-50 transition">
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-semibold"
+                  >
+                    आयोजना प्रभावित स्थानीय बासिन्दा
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    १,००,००,०००
+                  </td>
+                  <td
+                    class="px-7 py-6 text-[var(--color-title)] text-lg font-medium"
+                  >
+                    १०.०%
+                  </td>
+                  <td class="px-7 py-6">
+                    <span
+                      class="inline-flex items-center px-4 py-2 text-sm font-semibold bg-gray-200 text-[var(--color-text)] rounded-full"
+                    >
+                      लक-इन
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Mobile Cards -->
+        <div class="md:hidden space-y-4">
+          <!-- Card 1 -->
+          <div
+            class="bg-white border border-[var(--color-border)] p-5 shadow-sm"
+          >
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <h3
+                class="text-lg font-bold text-[var(--color-title)] leading-snug"
+              >
+                कर्मचारी सञ्चय कोष (EPF)
+              </h3>
+              <span
+                class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-green-100 text-green-700 rounded-full whitespace-nowrap"
+              >
+                सक्रिय
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-[var(--color-text)]">शेयर संख्या</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  ४,००,००,०००
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--color-text)]">स्वामित्व (%)</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  ४०.०%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white border border-[var(--color-border)] p-5 shadow-sm"
+          >
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <h3
+                class="text-lg font-bold text-[var(--color-title)] leading-snug"
+              >
+                नेपाल विद्युत प्राधिकरण (NEA)
+              </h3>
+              <span
+                class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-green-100 text-green-700 rounded-full whitespace-nowrap"
+              >
+                सक्रिय
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-[var(--color-text)]">शेयर संख्या</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  १,००,००,०००
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--color-text)]">स्वामित्व (%)</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  १०.०%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white border border-[var(--color-border)] p-5 shadow-sm"
+          >
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <h3
+                class="text-lg font-bold text-[var(--color-title)] leading-snug"
+              >
+                सर्वसाधारण
+              </h3>
+              <span
+                class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-blue-100 text-blue-700 rounded-full whitespace-nowrap"
+              >
+                कारोबार योग्य
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-[var(--color-text)]">शेयर संख्या</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  १,५०,००,०००
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--color-text)]">स्वामित्व (%)</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  १५.०%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white border border-[var(--color-border)] p-5 shadow-sm"
+          >
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <h3
+                class="text-lg font-bold text-[var(--color-title)] leading-snug"
+              >
+                आयोजना प्रभावित स्थानीय बासिन्दा
+              </h3>
+              <span
+                class="inline-flex items-center px-3 py-1 text-xs font-semibold bg-yellow-100 text-yellow-700 rounded-full whitespace-nowrap"
+              >
+                लक-इन
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-[var(--color-text)]">शेयर संख्या</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  १,००,००,०००
+                </p>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--color-text)]">स्वामित्व (%)</p>
+                <p class="text-lg font-semibold text-[var(--color-title)] mt-1">
+                  १०.०%
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 gap-3">
+          <p class="text-sm md:text-base italic text-[var(--color-text)]">
+            अन्तिम अपडेट: असार ३१, २०८३। सबै अंकहरू नेपाली रुपैयाँ (रु) मा छन्।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-[var(--color-footer)] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0 py-10 md:py-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10"
+        >
+          <!-- Company Info -->
+          <div class="lg:col-span-5 sm:col-span-2">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">
+              बेतन कर्णाली हाइड्रोपावर
+            </h2>
+
+            <p class="text-white/80 leading-7 text-base md:text-lg">
+              बेतन कर्णाली सञ्चयकर्ता जलविद्युत कम्पनी लिमिटेड नेपालको ऊर्जा
+              क्षेत्रमा उत्कृष्टताका लागि प्रतिबद्ध छ, संस्थागत सहयोगमार्फत दिगो
+              शक्ति प्रदान गर्दै।
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">छिटो लिङ्कहरू</h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li>
+                <a href="index.html" class="hover:text-white transition"
+                  >गृहपृष्ठ</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-white transition"
+                  >हाम्रो बारेमा</a
+                >
+              </li>
+              <li>
+                <a href="projects.html" class="hover:text-white transition"
+                  >परियोजनाहरू</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="hover:text-white transition"
+                  >ग्यालरी</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-white transition"
+                  >सम्पर्क</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:col-span-3">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">
+              सम्पर्क गर्नुहोस्
+            </h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li class="flex items-start gap-3 md:gap-4">
+                <i class="fa-solid fa-map-marker-alt text-[#047dd4] mt-1"></i>
+                <span>मीनभवन, काठमाडौं, नेपाल</span>
+              </li>
+
+              <li class="flex items-start gap-3 md:gap-4">
+                <i class="fa-solid fa-phone text-[#047dd4] mt-1"></i>
+                <a
+                  href="tel:+9779800000000"
+                  class="hover:text-white transition"
+                >
+                  +९७७-१-XXXXXXX
+                </a>
+              </li>
+
+              <li class="flex items-start gap-3 md:gap-4 break-all">
+                <i class="fa-solid fa-envelope text-[#047dd4] mt-1"></i>
+                <a
+                  href="mailto:info@example.com"
+                  class="hover:text-white transition"
+                >
+                  info@bkshcl.com.np
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">सामाजिक सञ्जाल</h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-facebook text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">फेसबुक</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-x-twitter text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">ट्विटर</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-youtube text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">युट्युब</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-linkedin text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">लिङ्क्डइन</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10">
+        <div
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-3"
+        >
+          <p
+            class="text-sm md:text-base text-white/80 text-center md:text-left"
+          >
+            © २०२६ हाइड्रोपावर कम्पनी। सर्वाधिकार सुरक्षित।
+          </p>
+
+          <p
+            class="text-sm md:text-base text-white/80 flex flex-wrap items-center justify-center gap-2 text-center"
+          >
+            Developed by
+            <a href="#" class="inline-flex items-center">
+              <img
+                src="./assets/images/White Logo.png"
+                alt="कम्पनी लोगो"
+                class="h-7 w-auto object-contain"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
