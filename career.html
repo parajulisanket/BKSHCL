@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favico.jpg" type="image/png" />
+    <title>BKSHCL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <header class="sticky top-0 z-50 bg-[var(--color-bg)] shadow">
+      <nav class="max-w-[98rem] mx-auto px-4 md:px-0">
+        <div class="flex items-center justify-between h-20">
+          <!-- Left Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/logo-main.gif"
+              alt="BKSHCL Logo"
+              class="h-14 w-auto"
+            />
+          </a>
+
+          <!-- Center Nav Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-8 text-md font-medium text-[var(--color-title)]"
+          >
+            <li>
+              <a href="index.html" class="nav-link">गृहपृष्ठ</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="relative group">
+              <button type="button" class="nav-link flex items-center gap-1">
+                हाम्रो बारेमा
+                <span class="text-xs"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+
+              <ul
+                class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <li>
+                  <a href="/about-us.html" class="dropdown-link"
+                    >हाम्रो बारेमा</a
+                  >
+                </li>
+                <li>
+                  <a href="message.html" class="dropdown-link"
+                    >नेतृत्वको सन्देश</a
+                  >
+                </li>
+                <li>
+                  <a href="team.html" class="dropdown-link">टिम</a>
+                </li>
+                <li>
+                  <a href="career.html" class="dropdown-link">करियर</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="projects.html" class="nav-link">आयोजना</a>
+            </li>
+
+            <li>
+              <a href="investor-detail.html" class="nav-link"
+                >लगानीकर्ता विवरण</a
+              >
+            </li>
+            <!-- Dropdown -->
+            <li class="relative group">
+              <button type="button" class="nav-link flex items-center gap-1">
+                सञ्चार तथा प्रभाव
+                <span class="text-xs"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+
+              <ul
+                class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <li>
+                  <a href="/medai-and-news.html" class="dropdown-link"
+                    >समाचार तथा अपडेट</a
+                  >
+                </li>
+                <li>
+                  <a href="/gallery.html" class="dropdown-link">ग्यालेरी </a>
+                </li>
+                <li>
+                  <a href="/csr.html" class="dropdown-link">
+                    सामाजिक उत्तरदायित्व</a
+                  >
+                </li>
+                <li>
+                  <a href="/faq.html" class="dropdown-link">
+                    सोधिएका प्रश्नहरू</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="documents.html" class="nav-link">कागजात</a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="nav-link">सम्पर्क</a>
+            </li>
+          </ul>
+
+          <!-- Right Search -->
+          <div class="relative flex items-center gap-3">
+            <div
+              id="searchBox"
+              class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 opacity-0 scale-95 pointer-events-none transition-all duration-300"
+            >
+              <input
+                type="text"
+                placeholder="खोज्नुहोस्..."
+                class="w-56 px-4 py-2 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)]"
+              />
+            </div>
+
+            <button
+              id="searchToggle"
+              class="hidden lg:flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)] hover:bg-[var(--color-primary)] hover:text-white transition duration-300"
+              type="button"
+              aria-label="Search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobileMenuBtn"
+              class="lg:hidden h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+              type="button"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="lg:hidden fixed inset-0 z-[999] bg-white opacity-0 pointer-events-none -translate-y-full transition-all duration-500 ease-in-out overflow-y-auto"
+        >
+          <div class="min-h-screen px-4 pb-8 pt-5 bg-white">
+            <div class="flex items-center justify-between mb-6">
+              <img
+                src="assets/images/logo-main.gif"
+                alt="BKSHCL Logo"
+                class="h-14 w-auto"
+              />
+
+              <button
+                id="mobileMenuClose"
+                class="h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+                type="button"
+                aria-label="Close menu"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="mb-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="खोज्नुहोस्..."
+                  class="w-full px-4 py-3 pr-11 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)] transition"
+                />
+                <button
+                  type="button"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-title)] hover:text-[var(--color-primary)] transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+
+            <ul class="space-y-4 text-sm font-medium text-[var(--color-title)]">
+              <li><a href="index.html" class="mobile-link">गृहपृष्ठ</a></li>
+
+              <!-- Dropdown 1: हाम्रो बारेमा -->
+              <li class="mobile-dropdown-container">
+                <button
+                  type="button"
+                  class="mobile-dropdown-toggle mobile-link w-full flex items-center justify-between"
+                >
+                  <span>हाम्रो बारेमा</span>
+                  <i
+                    class="mobile-dropdown-icon fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                  ></i>
+                </button>
+
+                <ul
+                  class="mobile-dropdown overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  style="max-height: 0px"
+                >
+                  <li>
+                    <a href="about.html" class="mobile-sub-link"
+                      >हाम्रो बारेमा</a
+                    >
+                  </li>
+                  <li>
+                    <a href="message.html" class="mobile-sub-link">सन्देश</a>
+                  </li>
+                  <li>
+                    <a href="team.html" class="mobile-sub-link">टिम</a>
+                  </li>
+                  <li>
+                    <a href="career.html" class="mobile-sub-link">करियर</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="projects.html" class="mobile-link">आयोजना</a></li>
+              <li>
+                <a href="investor-detail.html" class="mobile-link"
+                  >लगानीकर्ता विवरण</a
+                >
+              </li>
+              <li><a href="documents.html" class="mobile-link">कागजात</a></li>
+
+              <!-- Dropdown 2: सञ्चार तथा प्रभाव -->
+              <li class="mobile-dropdown-container">
+                <button
+                  type="button"
+                  class="mobile-dropdown-toggle mobile-link w-full flex items-center justify-between"
+                >
+                  <span>सञ्चार तथा प्रभाव</span>
+                  <i
+                    class="mobile-dropdown-icon fa-solid fa-chevron-down text-xs transition-transform duration-300"
+                  ></i>
+                </button>
+
+                <ul
+                  class="mobile-dropdown overflow-hidden opacity-0 transition-all duration-500 ease-in-out pl-4"
+                  style="max-height: 0px"
+                >
+                  <li>
+                    <a href="media-and-news.html" class="mobile-sub-link"
+                      >समाचार तथा अपडेट</a
+                    >
+                  </li>
+                  <li>
+                    <a href="gallery.html" class="mobile-sub-link">ग्यालेरी</a>
+                  </li>
+                  <li>
+                    <a href="csr.html" class="mobile-sub-link"
+                      >सामाजिक उत्तरदायित्व (CSR)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="faq.html" class="mobile-sub-link"
+                      >सोधिएका प्रश्नहरू (FAQs)</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="contact.html" class="mobile-link">सम्पर्क</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div
+      class="relative max-w-7xl mx-auto my-6 bg-cover bg-center bg-no-repeat h-[350px] flex items-end px-6 md:px-10 pb-8"
+      style="background-image: url(&quot;assets/images/breadcrums.webp&quot;)"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"
+      ></div>
+
+      <div class="relative z-10 flex flex-col gap-1.5 w-full">
+        <h1 class="text-2xl md:text-5xl font-bold text-white tracking-wide">
+          क्यारियर
+        </h1>
+
+        <p class="text-xs md:text-lg text-white font-normal">
+          नेपालको ऊर्जा भविष्य निर्माणमा हाम्रो गौरवशाली टोलीको हिस्सा
+          बन्नुहोस्। हामीसँगै मिलेर उज्यालो नेपालको सपना साकार पारौं।
+        </p>
+      </div>
+    </div>
+
+    <!-- career page -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto md:px-0 px-4">
+        <!-- Why Work With Us -->
+        <div class="py-12 space-y-8">
+          <!-- Header Section -->
+          <div class="text-center space-y-3">
+            <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+              हाम्रो टिममा सामेल हुनुहोस्
+            </h1>
+            <p
+              class="text-sm md:text-base text-[var(--color-text)] font-medium"
+            >
+              बेतन कर्णाली जलविद्युत आयोजनासँग काम गर्दै नेपालको ऊर्जा विकास,
+              पूर्वाधार निर्माण र राष्ट्रिय समृद्धिमा योगदान पुर्‍याउने अवसर
+              प्राप्त गर्नुहोस्।
+            </p>
+          </div>
+          <div class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Card 1 -->
+              <div
+                class="bg-white border border-gray-200 p-6 shadow-sm hover:shadow-lg transition"
+              >
+                <div
+                  class="h-12 w-12 bg-[#047dd4]/10 flex items-center justify-center mb-5"
+                >
+                  <i class="fa-solid fa-chart-line text-[#047dd4] text-xl"></i>
+                </div>
+
+                <h2 class="text-xl font-bold text-[var(--color-primary)] mb-3">
+                  व्यावसायिक वृद्धि
+                </h2>
+
+                <p class="text-gray-600 leading-7">
+                  हामी कर्मचारीहरूको सीप, क्षमता र अनुभव विकासका लागि तालिम,
+                  मार्गदर्शन र व्यावहारिक कार्य वातावरण प्रदान गर्दछौं।
+                </p>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-[var(--color-primary)] border border-[var(--color-primary)] p-6 shadow-sm hover:shadow-lg transition text-white"
+              >
+                <div
+                  class="h-12 w-12 bg-white/10 flex items-center justify-center mb-5"
+                >
+                  <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+                </div>
+
+                <h2 class="text-xl font-bold mb-3">सुरक्षित भविष्य</h2>
+
+                <p class="text-white/80 leading-7">
+                  दीर्घकालीन जलविद्युत आयोजनासँग जोडिएर स्थिर, जिम्मेवार र
+                  सुरक्षित करियर निर्माण गर्ने अवसर प्राप्त हुन्छ।
+                </p>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-white border border-gray-200 p-6 shadow-sm hover:shadow-lg transition"
+              >
+                <div
+                  class="h-12 w-12 bg-[#047dd4]/10 flex items-center justify-center mb-5"
+                >
+                  <i class="fa-solid fa-users text-[#047dd4] text-xl"></i>
+                </div>
+
+                <h2 class="text-xl font-bold text-[var(--color-primary)] mb-3">
+                  समावेशी संस्कृति
+                </h2>
+
+                <p class="text-gray-600 leading-7">
+                  हामी समान अवसर, आपसी सम्मान, सहकार्य र पारदर्शितामा आधारित
+                  कार्य संस्कृतिलाई प्राथमिकता दिन्छौं।
+                </p>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="bg-white border border-gray-200 p-6 shadow-sm hover:shadow-lg transition"
+              >
+                <div
+                  class="h-12 w-12 bg-[#047dd4]/10 flex items-center justify-center mb-5"
+                >
+                  <i class="fa-solid fa-bolt text-[#047dd4] text-xl"></i>
+                </div>
+
+                <h2 class="text-xl font-bold text-[var(--color-primary)] mb-3">
+                  राष्ट्रिय योगदान
+                </h2>
+
+                <p class="text-gray-600 leading-7">
+                  नेपालको ऊर्जा उत्पादन, पूर्वाधार विकास र आर्थिक समृद्धिमा
+                  प्रत्यक्ष योगदान पुर्‍याउने अवसर प्रदान गर्दछौं।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Current Vacancies -->
+        <div class="py-12">
+          <div
+            class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6"
+          >
+            <div class="border-l-[8px] border-[#047dd4] pl-4">
+              <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
+                हालका रिक्त पदहरू
+              </h1>
+            </div>
+
+            <a
+              href="#application-process"
+              class="inline-flex items-center justify-center bg-[var(--color-primary)] text-white px-6 py-3 font-semibold hover:bg-[#035f9f] transition"
+            >
+              आवेदन प्रक्रिया हेर्नुहोस्
+            </a>
+          </div>
+
+          <!-- Desktop Table -->
+          <div class="hidden md:block border border-gray-200 overflow-hidden">
+            <table class="w-full text-left">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-5 py-4 text-[var(--color-primary)] font-bold">
+                    पदको नाम
+                  </th>
+                  <th class="px-5 py-4 text-[var(--color-primary)] font-bold">
+                    विभाग
+                  </th>
+                  <th class="px-5 py-4 text-[var(--color-primary)] font-bold">
+                    संख्या
+                  </th>
+                  <th class="px-5 py-4 text-[var(--color-primary)] font-bold">
+                    अन्तिम मिति
+                  </th>
+                  <th class="px-5 py-4 text-[var(--color-primary)] font-bold">
+                    कार्य
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50 transition">
+                  <td class="px-5 py-5">
+                    <h3 class="font-bold text-gray-800">
+                      वरिष्ठ इन्जिनियर सिभिल
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-1">
+                      निर्माण तथा साइट सुपरिवेक्षण
+                    </p>
+                  </td>
+
+                  <td class="px-5 py-5 text-gray-600">प्राविधिक विभाग</td>
+
+                  <td class="px-5 py-5 text-gray-600">०२</td>
+
+                  <td class="px-5 py-5 text-gray-600">२०८१ चैत २५</td>
+
+                  <td class="px-5 py-5">
+                    <a
+                      href="career-details.html"
+                      class="inline-flex bg-[var(--color-primary)] text-white px-5 py-2 text-sm font-semibold hover:bg-[#035f9f] transition"
+                    >
+                      विवरण हेर्नुहोस्
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-50 transition">
+                  <td class="px-5 py-5">
+                    <h3 class="font-bold text-gray-800">लेखा अधिकृत</h3>
+                    <p class="text-sm text-gray-500 mt-1">
+                      आर्थिक अभिलेख तथा प्रतिवेदन
+                    </p>
+                  </td>
+
+                  <td class="px-5 py-5 text-gray-600">
+                    प्रशासन तथा वित्त विभाग
+                  </td>
+
+                  <td class="px-5 py-5 text-gray-600">०१</td>
+
+                  <td class="px-5 py-5 text-gray-600">२०८१ चैत ३०</td>
+
+                  <td class="px-5 py-5">
+                    <a
+                      href="career-details.html"
+                      class="inline-flex bg-[var(--color-primary)] text-white px-5 py-2 text-sm font-semibold hover:bg-[#035f9f] transition"
+                    >
+                      विवरण हेर्नुहोस्
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-50 transition">
+                  <td class="px-5 py-5">
+                    <h3 class="font-bold text-gray-800">सामाजिक परिचालक</h3>
+                    <p class="text-sm text-gray-500 mt-1">
+                      स्थानीय समन्वय तथा सामाजिक कार्य
+                    </p>
+                  </td>
+
+                  <td class="px-5 py-5 text-gray-600">
+                    वातावरण तथा सामाजिक विभाग
+                  </td>
+
+                  <td class="px-5 py-5 text-gray-600">०३</td>
+
+                  <td class="px-5 py-5 text-gray-600">२०८१ चैत २८</td>
+
+                  <td class="px-5 py-5">
+                    <a
+                      href="career-details.html"
+                      class="inline-flex bg-[var(--color-primary)] text-white px-5 py-2 text-sm font-semibold hover:bg-[#035f9f] transition"
+                    >
+                      विवरण हेर्नुहोस्
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mobile Vacancy Cards -->
+          <div class="md:hidden space-y-5">
+            <!-- Mobile Job 1 -->
+            <div class="border border-gray-200 p-5 shadow-sm">
+              <h3 class="font-bold text-xl text-[var(--color-primary)] mb-2">
+                वरिष्ठ इन्जिनियर सिभिल
+              </h3>
+
+              <div class="space-y-2 text-gray-600 text-sm mb-4">
+                <p><strong>विभाग:</strong> प्राविधिक विभाग</p>
+                <p><strong>संख्या:</strong> ०२</p>
+                <p><strong>अन्तिम मिति:</strong> २०८१ चैत २५</p>
+              </div>
+
+              <a
+                href="career-details.html"
+                class="inline-flex bg-[var(--color-primary)] text-white px-5 py-2 text-sm font-semibold"
+              >
+                विवरण हेर्नुहोस्
+              </a>
+            </div>
+
+            <!-- Mobile Job 2 -->
+            <div class="border border-gray-200 p-5 shadow-sm">
+              <h3 class="font-bold text-xl text-[var(--color-primary)] mb-2">
+                लेखा अधिकृत
+              </h3>
+
+              <div class="space-y-2 text-gray-600 text-sm mb-4">
+                <p><strong>विभाग:</strong> प्रशासन तथा वित्त विभाग</p>
+                <p><strong>संख्या:</strong> ०१</p>
+                <p><strong>अन्तिम मिति:</strong> २०८१ चैत ३०</p>
+              </div>
+
+              <a
+                href="career-details.html"
+                class="inline-flex bg-[var(--color-primary)] text-white px-5 py-2 text-sm font-semibold"
+              >
+                विवरण हेर्नुहोस्
+              </a>
+            </div>
+
+            <!-- Mobile Job 3 -->
+            <div class="border border-gray-200 p-5 shadow-sm">
+              <h3 class="font-bold text-xl text-[var(--color-primary)] mb-2">
+                सामाजिक परिचालक
+              </h3>
+
+              <div class="space-y-2 text-gray-600 text-sm mb-4">
+                <p><strong>विभाग:</strong> वातावरण तथा सामाजिक विभाग</p>
+                <p><strong>संख्या:</strong> ०३</p>
+                <p><strong>अन्तिम मिति:</strong> २०८१ चैत २८</p>
+              </div>
+
+              <a
+                href="career-details.html"
+                class="inline-flex bg-[var(--color-primary)] text-white px-5 py-2 text-sm font-semibold"
+              >
+                विवरण हेर्नुहोस्
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Application Process -->
+        <div id="application-process" class="py-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Steps -->
+            <div class="lg:col-span-6 space-y-8">
+              <div>
+                <div class="border-l-[8px] border-[#047dd4] pl-4">
+                  <h1
+                    class="font-bold text-3xl block text-[var(--color-primary)]"
+                  >
+                    आवेदन कसरी दिने?
+                  </h1>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex gap-4">
+                  <div
+                    class="h-10 w-10 flex-shrink-0 bg-[var(--color-primary)] text-white flex items-center justify-center font-bold"
+                  >
+                    १
+                  </div>
+
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">
+                      सूचना अध्ययन
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                      रिक्त पदको विवरण, आवश्यक योग्यता, अनुभव, जिम्मेवारी र
+                      अन्तिम मिति ध्यानपूर्वक अध्ययन गर्नुहोस्।
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex gap-4">
+                  <div
+                    class="h-10 w-10 flex-shrink-0 bg-[var(--color-primary)] text-white flex items-center justify-center font-bold"
+                  >
+                    २
+                  </div>
+
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">
+                      कागजात तयारी
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                      आफ्नो CV, नागरिकता प्रमाणपत्र, शैक्षिक प्रमाणपत्र, अनुभव
+                      पत्र तथा अन्य आवश्यक कागजात तयार गर्नुहोस्।
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex gap-4">
+                  <div
+                    class="h-10 w-10 flex-shrink-0 bg-[var(--color-primary)] text-white flex items-center justify-center font-bold"
+                  >
+                    ३
+                  </div>
+
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">
+                      आवेदन पेश गर्नुहोस्
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                      तोकिएको इमेल वा आवेदन फारममार्फत आवश्यक कागजातसहित आवेदन
+                      पेश गर्नुहोस्।
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex gap-4">
+                  <div
+                    class="h-10 w-10 flex-shrink-0 bg-[var(--color-primary)] text-white flex items-center justify-center font-bold"
+                  >
+                    ४
+                  </div>
+
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">
+                      छनोट तथा सम्पर्क
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                      प्राप्त आवेदनहरूको मूल्यांकनपछि योग्य उम्मेदवारहरूलाई
+                      अन्तर्वार्ता वा थप प्रक्रियाका लागि सम्पर्क गरिनेछ।
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="lg:col-span-6">
+              <div class="h-[320px] md:h-[430px] overflow-hidden shadow-sm">
+                <img
+                  src="assets/images/carrer.avif"
+                  alt="आवेदन प्रक्रिया"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents and Notice -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-12">
+          <!-- Required Documents -->
+          <div class="bg-gray-50 border border-gray-200 p-7">
+            <div class="flex items-center gap-3 mb-5">
+              <div
+                class="h-11 w-11 bg-[#047dd4]/10 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-file-lines text-[#047dd4] text-xl"></i>
+              </div>
+
+              <h2 class="text-2xl font-bold text-[var(--color-primary)]">
+                आवश्यक कागजातहरू
+              </h2>
+            </div>
+
+            <ul class="space-y-3 text-gray-700 leading-7">
+              <li class="flex gap-3">
+                <i class="fa-solid fa-check text-[#047dd4] mt-1"></i>
+                अपडेट गरिएको व्यक्तिगत विवरण/CV
+              </li>
+
+              <li class="flex gap-3">
+                <i class="fa-solid fa-check text-[#047dd4] mt-1"></i>
+                नागरिकता प्रमाणपत्रको प्रतिलिपि
+              </li>
+
+              <li class="flex gap-3">
+                <i class="fa-solid fa-check text-[#047dd4] mt-1"></i>
+                शैक्षिक योग्यताको प्रमाणपत्र
+              </li>
+
+              <li class="flex gap-3">
+                <i class="fa-solid fa-check text-[#047dd4] mt-1"></i>
+                कार्य अनुभव प्रमाणपत्र
+              </li>
+
+              <li class="flex gap-3">
+                <i class="fa-solid fa-check text-[#047dd4] mt-1"></i>
+                पासपोर्ट साइज फोटो
+              </li>
+            </ul>
+          </div>
+
+          <!-- General Notice -->
+          <div
+            class="bg-[var(--color-primary)] border border-[var(--color-primary)] p-7 text-white"
+          >
+            <div class="flex items-center gap-3 mb-5">
+              <div
+                class="h-11 w-11 bg-white/10 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-circle-info text-white text-xl"></i>
+              </div>
+
+              <h2 class="text-2xl font-bold">सामान्य सूचना</h2>
+            </div>
+
+            <p class="text-white/85 leading-8 mb-5">
+              अधुरो वा म्याद नाघेर प्राप्त आवेदन स्वीकार गरिने छैन। केवल
+              प्रारम्भिक छनोटमा परेका उम्मेदवारहरूलाई मात्र थप प्रक्रियाका लागि
+              सम्पर्क गरिनेछ।
+            </p>
+
+            <p class="text-white/85 leading-8">
+              कम्पनीले कुनै पनि समयमा विज्ञापन संशोधन, स्थगित वा रद्द गर्ने
+              अधिकार सुरक्षित राख्दछ।
+            </p>
+          </div>
+        </div>
+
+        <!-- Career Contact -->
+        <!-- <div class="bg-gray-100 border border-gray-200 p-7 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8">
+              <h2
+                class="text-2xl md:text-3xl font-bold text-[var(--color-primary)] mb-3"
+              >
+                हाल उपयुक्त पद फेला परेन?
+              </h2>
+
+              <p class="text-gray-600 leading-8 text-lg">
+                हाल कुनै नयाँ रिक्त पद उपलब्ध नभए पनि तपाईं आफ्नो CV हाम्रो मानव
+                संसाधन शाखामा पठाउन सक्नुहुन्छ। भविष्यमा उपयुक्त अवसर उपलब्ध
+                भएमा सम्पर्क गरिनेछ।
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 lg:text-right">
+              <a
+                href="mailto:career@betankarnali.com.np"
+                class="inline-flex items-center justify-center gap-2 bg-[var(--color-primary)] text-white px-7 py-4 font-semibold hover:bg-[#035f9f] transition"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                CV पठाउनुहोस्
+              </a>
+
+              <p class="text-gray-600 mt-3">career@betankarnali.com.np</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-[var(--color-footer)] text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0 py-10 md:py-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10"
+        >
+          <!-- Company Info -->
+          <div class="lg:col-span-5 sm:col-span-2">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">
+              बेतन कर्णाली हाइड्रोपावर
+            </h2>
+
+            <p class="text-white/80 leading-7 text-base md:text-lg">
+              बेतन कर्णाली सञ्चयकर्ता जलविद्युत कम्पनी लिमिटेड नेपालको ऊर्जा
+              क्षेत्रमा उत्कृष्टताका लागि प्रतिबद्ध छ, संस्थागत सहयोगमार्फत दिगो
+              शक्ति प्रदान गर्दै।
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">छिटो लिङ्कहरू</h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li>
+                <a href="index.html" class="hover:text-white transition"
+                  >गृहपृष्ठ</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-white transition"
+                  >हाम्रो बारेमा</a
+                >
+              </li>
+              <li>
+                <a href="projects.html" class="hover:text-white transition"
+                  >परियोजनाहरू</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="hover:text-white transition"
+                  >ग्यालरी</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-white transition"
+                  >सम्पर्क</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:col-span-3">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">
+              सम्पर्क गर्नुहोस्
+            </h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li class="flex items-start gap-3 md:gap-4">
+                <i class="fa-solid fa-map-marker-alt text-[#047dd4] mt-1"></i>
+                <span>मीनभवन, काठमाडौं, नेपाल</span>
+              </li>
+
+              <li class="flex items-start gap-3 md:gap-4">
+                <i class="fa-solid fa-phone text-[#047dd4] mt-1"></i>
+                <a
+                  href="tel:+9779800000000"
+                  class="hover:text-white transition"
+                >
+                  +९७७-१-XXXXXXX
+                </a>
+              </li>
+
+              <li class="flex items-start gap-3 md:gap-4 break-all">
+                <i class="fa-solid fa-envelope text-[#047dd4] mt-1"></i>
+                <a
+                  href="mailto:info@example.com"
+                  class="hover:text-white transition"
+                >
+                  info@bkshcl.com.np
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">सामाजिक सञ्जाल</h3>
+
+            <ul class="space-y-3 text-base md:text-lg text-white/80">
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-facebook text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">फेसबुक</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-x-twitter text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">ट्विटर</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-youtube text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">युट्युब</a>
+              </li>
+
+              <li class="flex items-center gap-3 md:gap-4">
+                <i class="fa-brands fa-linkedin text-[#047dd4]"></i>
+                <a href="#" class="hover:text-white transition">लिङ्क्डइन</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10">
+        <div
+          class="max-w-7xl mx-auto px-4 md:px-6 xl:px-0 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-3"
+        >
+          <p
+            class="text-sm md:text-base text-white/80 text-center md:text-left"
+          >
+            © २०२६ हाइड्रोपावर कम्पनी। सर्वाधिकार सुरक्षित।
+          </p>
+
+          <p
+            class="text-sm md:text-base text-white/80 flex flex-wrap items-center justify-center gap-2 text-center"
+          >
+            Developed by
+            <a href="#" class="inline-flex items-center">
+              <img
+                src="./assets/images/White Logo.png"
+                alt="कम्पनी लोगो"
+                class="h-7 w-auto object-contain"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
