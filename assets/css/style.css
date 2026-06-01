@@ -273,10 +273,17 @@ body {
   border-left-color: #031632;
 }
 
+/* Apply the border around the entire wrapper item instead */
+.faq-item {
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  margin-bottom: 16px; /* Spacing between independent accordion bars */
+}
+
 .faq-question {
   width: 100%;
-  background: #ffffff;
-  border: 1px solid var(--color-border);
+  background: transparent;
+  border: none; /* Removed individual border */
   padding: 16px 20px;
   display: flex;
   align-items: center;
@@ -291,11 +298,9 @@ body {
 
 .faq-answer {
   display: none;
-  background: #ffffff;
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  padding: 0 20px 16px 20px;
 }
 
 .faq-answer p {
@@ -324,4 +329,51 @@ body {
 
 .news-card:hover {
   transform: translateY(-3px);
+}
+
+/* timeline part */
+@keyframes currentTimelinePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(11, 139, 220, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(11, 139, 220, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(11, 139, 220, 0);
+  }
+}
+
+.timeline-current-dot {
+  animation: currentTimelinePulse 1.6s infinite;
+}
+
+/* Better popup scrollbar */
+#messageModalBox ::-webkit-scrollbar {
+  width: 3px;
+}
+
+#messageModalBox ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+#messageModalBox ::-webkit-scrollbar-thumb {
+  background: #047dd4;
+  border-radius: 20px;
+}
+
+#messageModalBox ::-webkit-scrollbar-thumb:hover {
+  background: #0369b3;
+}
+
+/* Mobile popup fix */
+@media (max-width: 767px) {
+  #messageModalBox {
+    width: 95%;
+  }
+
+  #messageModalBox .max-w-\[420px\] {
+    max-width: 100%;
+    height: 320px;
+  }
 }

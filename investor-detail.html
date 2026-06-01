@@ -293,308 +293,67 @@
 
     <!-- Financial Indicators Section -->
     <section class="py-12">
-      <div class="max-w-7xl mx-auto px-4 md:px-0 space-y-8">
-        <!-- Header Section -->
-        <div class="text-center space-y-2">
-          <h1
-            class="font-bold text-3xl md:text-4xl block text-[var(--color-primary)]"
-          >
-            वित्तीय सूचकहरू
-          </h1>
-          <p class="text-sm md:text-base text-[var(--color-text)] font-medium">
-            आयोजनाको लागत, प्रतिफल र आर्थिक सूचकहरूको विवरण
-          </p>
-        </div>
-
-        <!-- Main Financial Summary -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <!-- Left Featured Cost Card -->
-          <div class="lg:col-span-4 flex">
-            <div
-              class="w-full h-full bg-[var(--color-primary)] text-white p-8 md:p-10 relative overflow-hidden flex flex-col justify-between"
-            >
-              <div class="relative z-10">
-                <div
-                  class="w-16 h-16 bg-white/15 flex items-center justify-center text-3xl mb-8"
-                >
-                  <i class="fa-solid fa-sack-dollar"></i>
-                </div>
-
-                <p class="text-white/80 text-base font-medium mb-3">
-                  Estimated Project Cost
-                </p>
-
-                <h2 class="text-2xl md:text-4xl font-bold leading-tight">
-                  NPR 74,151
-                </h2>
-
-                <p class="text-xl md:text-2xl font-semibold mt-2">Million</p>
-
-                <div class="mt-8 pt-6 border-t border-white/20">
-                  <p class="text-white/80 text-base">Equivalent Cost</p>
-                  <p class="text-2xl font-bold mt-1">$623.12 Million</p>
-                </div>
-
-                <div
-                  class="mt-8 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm"
-                >
-                  <i class="fa-solid fa-circle-info"></i>
-                  <span>1 USD = NPR 119</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Indicator Cards -->
-          <div class="lg:col-span-8">
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 h-full"
-            >
-              <!-- Card 1 -->
-              <div
-                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
-              >
-                <div class="flex items-center justify-between mb-5">
-                  <div
-                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
-                  >
-                    <i class="fa-solid fa-chart-line"></i>
-                  </div>
-                  <span
-                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
-                  >
-                    IRR
-                  </span>
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
-                    Project IRR
-                  </h3>
-                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
-                    12.73%
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 2 -->
-              <div
-                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
-              >
-                <div class="flex items-center justify-between mb-5">
-                  <div
-                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
-                  >
-                    <i class="fa-solid fa-seedling"></i>
-                  </div>
-                  <span
-                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
-                  >
-                    Economic
-                  </span>
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
-                    Economic IRR
-                  </h3>
-                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
-                    17.01%
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 3 -->
-              <div
-                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
-              >
-                <div class="flex items-center justify-between mb-5">
-                  <div
-                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
-                  >
-                    <i class="fa-solid fa-percent"></i>
-                  </div>
-                  <span
-                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
-                  >
-                    Interest
-                  </span>
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
-                    Loan Interest Rate
-                  </h3>
-                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
-                    11%
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div
-                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
-              >
-                <div class="flex items-center justify-between mb-5">
-                  <div
-                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
-                  >
-                    <i class="fa-solid fa-scale-balanced"></i>
-                  </div>
-                  <span
-                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
-                  >
-                    Ratio
-                  </span>
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
-                    Debt Equity Ratio
-                  </h3>
-                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
-                    70:30
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 5 -->
-              <div
-                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
-              >
-                <div class="flex items-center justify-between mb-5">
-                  <div
-                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
-                  >
-                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                  </div>
-                  <span
-                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
-                  >
-                    DSCR
-                  </span>
-                </div>
-
-                <div>
-                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
-                    DSCR
-                  </h3>
-                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
-                    1.53
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 6 -->
-              <div
-                class="bg-white p-6 border border-[var(--color-border)] hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between"
-              >
-                <div class="flex items-center justify-between mb-5">
-                  <div
-                    class="w-12 h-12 bg-[#077DD4] text-[#fcfe04] flex items-center justify-center text-xl"
-                  >
-                    <i class="fa-solid fa-arrow-trend-up"></i>
-                  </div>
-                  <span
-                    class="text-xs font-semibold text-[var(--color-text)] bg-gray-200 px-2 py-1 rounded-full"
-                  >
-                    B/C
-                  </span>
-                </div>
-                <div>
-                  <h3 class="text-sm font-semibold text-[var(--color-text)]">
-                    Benefit Cost Ratio
-                  </h3>
-                  <p class="text-4xl font-bold text-[var(--color-title)] mt-2">
-                    1.28
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Wide Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
-          <!-- NPV Card -->
+      <div class="max-w-7xl mx-auto px-4 md:px-0">
+        <!-- Main Financial Summary Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div
-            class="md:col-span-1 bg-white p-6 border border-[var(--color-border)]"
+            class="bg-white border border-[var(--color-border)] p-6 flex flex-col justify-between min-h-[180px] shadow-sm"
           >
-            <div class="flex items-center gap-4 mb-5">
-              <div
-                class="w-12 h-12 bg-[var(--color-primary)] text-[var(--color-secondary)] flex items-center justify-center text-xl"
-              >
-                <i class="fa-solid fa-coins"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[var(--color-title)]">NPV</h3>
-                <p class="text-sm text-[var(--color-text)]">
-                  10% Discount Rate
-                </p>
-              </div>
-            </div>
-
-            <div class="space-y-4">
-              <div>
-                <p class="text-3xl font-bold text-[var(--color-title)]">
-                  24,900
-                </p>
-                <p class="text-sm text-[var(--color-text)]">Million NPR</p>
-              </div>
-
-              <div class="border-t border-gray-200 pt-4">
-                <p class="text-3xl font-bold text-[var(--color-title)]">
-                  209.24
-                </p>
-                <p class="text-sm text-[var(--color-text)]">Million USD</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Payback Period Card -->
-          <div
-            class="bg-white p-6 border border-[var(--color-border)] flex flex-col justify-between"
-          >
-            <div class="flex items-center gap-4 mb-5">
-              <div
-                class="w-12 h-12 bg-[var(--color-primary)] text-[var(--color-secondary)] flex items-center justify-center text-xl"
-              >
-                <i class="fa-solid fa-calendar-check"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[var(--color-title)]">
-                  Pay-back Period
-                </h3>
-                <p class="text-sm text-[var(--color-text)]">Normal period</p>
-              </div>
-            </div>
-
             <div>
-              <p class="text-5xl font-bold text-[var(--color-primary)]">6.24</p>
-              <p class="text-sm text-[var(--color-text)] mt-2">Years</p>
+              <p class="text-sm font-medium text-gray-500 mb-2">
+                हालको शेयर मूल्य
+              </p>
+              <h3 class="text-4xl font-extrabold text-[#047dd4]">रु ३४२.५०</h3>
             </div>
+            <p class="text-sm font-semibold text-emerald-600 mt-2">+१.२५% आज</p>
           </div>
 
-          <!-- Discounted Payback Period Card -->
           <div
-            class="bg-white p-6 border border-[var(--color-border)] flex flex-col justify-between"
+            class="bg-white border border-[var(--color-border)] p-6 flex flex-col justify-between min-h-[180px] shadow-sm"
           >
-            <div class="flex items-center gap-4">
-              <div
-                class="w-12 h-12 bg-[var(--color-primary)] text-[var(--color-secondary)] flex items-center justify-center text-xl"
-              >
-                <i class="fa-solid fa-business-time"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[var(--color-title)]">
-                  Discounted Pay-back
-                </h3>
-                <p class="text-sm text-[var(--color-text)]">
-                  Discounted period
-                </p>
-              </div>
-            </div>
-
             <div>
-              <p class="text-5xl font-bold text-[var(--color-primary)]">9.53</p>
-              <p class="text-sm text-[var(--color-text)] mt-1">Years</p>
+              <p class="text-sm font-medium text-gray-500 mb-2">
+                बजार पूँजीकरण
+              </p>
+              <h3 class="text-4xl font-extrabold text-[#047dd4]">
+                रु १२.८ अर्ब
+              </h3>
             </div>
+            <p class="text-sm font-medium text-gray-500 mt-2">
+              संस्थागत नेतृत्व
+            </p>
+          </div>
+
+          <!-- Card 3: Project Capacity -->
+          <div
+            class="bg-white border border-[var(--color-border)] p-6 flex flex-col justify-between min-h-[180px] shadow-sm"
+          >
+            <div>
+              <p class="text-sm font-medium text-gray-500 mb-2">
+                कुल आयोजना क्षमता
+              </p>
+              <h3 class="text-4xl font-extrabold text-[#047dd4]">४३८ मे.वा.</h3>
+            </div>
+            <p class="text-sm font-medium text-gray-500 mt-2">
+              बेतन कर्णाली आयोजना
+            </p>
+          </div>
+
+          <div
+            class="bg-[#047dd4] p-6 flex flex-col justify-between min-h-[180px] shadow-md"
+          >
+            <div>
+              <p class="text-sm font-medium text-blue-100 mb-2">
+                आगामी साधारण सभा (AGM)
+              </p>
+              <h3 class="text-4xl font-extrabold text-white">असोज ९, २०८३</h3>
+            </div>
+            <a
+              href="#"
+              class="text-sm font-bold text-[#fcfe04] hover:underline inline-block mt-2"
+            >
+              सहभागिता दर्ता गर्नुहोस्
+            </a>
           </div>
         </div>
       </div>
@@ -885,6 +644,88 @@
           <p class="text-sm md:text-base italic text-[var(--color-text)]">
             अन्तिम अपडेट: असार ३१, २०८३। सबै अंकहरू नेपाली रुपैयाँ (रु) मा छन्।
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- नियमनकारी सूचना  -->
+    <section class="py-16 bg-[#032B4D] text-white">
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Left Column: Content and Notices -->
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-3xl font-bold">नियमनकारी सूचना तथा विवरणहरू</h2>
+            <p class="text-sm md:text-base text-white/80 font-medium">
+              लाभांश घोषणा, हकप्रद शेयर जारी र सुशासन सम्बन्धी आधिकारिक
+              सूचनाहरू।
+            </p>
+          </div>
+
+          <!-- Notice List Container -->
+          <div class="space-y-4">
+            <!-- Notice 1 -->
+            <div
+              class="flex items-center justify-between border border-[#395771] p-4 transition hover:bg-[#032d4d] cursor-pointer group"
+            >
+              <div class="flex items-center gap-4">
+                <div class="text-[#fcfe04] text-3xl">
+                  <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <div>
+                  <h4
+                    class="text-lg font-semibold text-white group-hover:text-[#fcfe04] transition"
+                  >
+                    ५ औं वार्षिक साधारण सभा (AGM) सम्बन्धी सूचना
+                  </h4>
+                  <p class="text-base text-white/80 mt-1">
+                    प्रकाशित मिति: जेठ २९, २०८३
+                  </p>
+                </div>
+              </div>
+              <div
+                class="text-white text-sm group-hover:translate-x-1 transition-transform"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <!-- Notice 2 -->
+            <div
+              class="flex items-center justify-between border border-[#395771] p-4 transition hover:bg-[#032d4d] cursor-pointer group"
+            >
+              <div class="flex items-center gap-4">
+                <div class="text-[#fcfe04] text-3xl">
+                  <i class="fa-regular fa-file-lines"></i>
+                </div>
+                <div>
+                  <h4
+                    class="text-lg font-semibold text-white group-hover:text-[#fcfe04] transition"
+                  >
+                    त्रैमासिक कार्यसम्पादन विवरण (तेस्रो त्रैमास आव २०८१)
+                  </h4>
+                  <p class="text-base text-white/80 mt-1">
+                    प्रकाशित मिति: वैशाख २२, २०८३
+                  </p>
+                </div>
+              </div>
+              <div
+                class="text-white text-sm group-hover:translate-x-1 transition-transform"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-full h-[400px] overflow-hidden">
+          <img
+            src="assets/images/csr.jpg"
+            alt="Boardroom"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>

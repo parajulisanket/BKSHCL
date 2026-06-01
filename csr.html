@@ -505,20 +505,26 @@
     <!-- csr iamges -->
     <section class="py-12">
       <div class="max-w-7xl mx-auto md:px-0 px-4">
+        <button
+          type="button"
+          class="gallery-filter hidden"
+          data-filter="all"
+        ></button>
+
         <!-- Header Section -->
         <div class="text-center mb-12 space-y-2">
           <h1 class="font-bold text-3xl block text-[var(--color-primary)]">
             प्रभावका केही झलकहरू
           </h1>
-          <!-- <p class="text-sm md:text-base text-[var(--color-text)] font-medium">
-            समृद्ध भविष्य र दिगो ऊर्जाका लागि प्रतिबद्धता
-          </p> -->
         </div>
 
         <!-- Asymmetric Photo Grid Layout -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <!-- Large Left Image -->
           <div
-            class="md:col-span-5 h-[300px] md:h-[500px] rounded overflow-hidden shadow-sm group relative"
+            class="gallery-item md:col-span-5 h-[300px] md:h-[500px] overflow-hidden shadow-sm group relative cursor-pointer"
+            data-category="all"
+            data-img="/assets/images/landing-hero.jpg"
           >
             <img
               src="/assets/images/landing-hero.jpg"
@@ -527,10 +533,12 @@
             />
           </div>
 
+          <!-- Center Column -->
           <div class="md:col-span-3 flex flex-col gap-4">
-            <!-- Top Center Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-4.jpeg"
             >
               <img
                 src="/assets/images/img-4.jpeg"
@@ -539,9 +547,10 @@
               />
             </div>
 
-            <!-- Bottom Center Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-1.jpeg"
             >
               <img
                 src="/assets/images/img-1.jpeg"
@@ -551,10 +560,12 @@
             </div>
           </div>
 
+          <!-- Right Column -->
           <div class="md:col-span-4 flex flex-col gap-4">
-            <!-- Top Right Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-2.jpeg"
             >
               <img
                 src="/assets/images/img-2.jpeg"
@@ -563,9 +574,10 @@
               />
             </div>
 
-            <!-- Bottom Right Image -->
             <div
-              class="h-[142px] md:h-[242px] rounded overflow-hidden shadow-sm group relative"
+              class="gallery-item h-[142px] md:h-[242px] overflow-hidden shadow-sm group relative cursor-pointer"
+              data-category="all"
+              data-img="/assets/images/img-3.jpeg"
             >
               <img
                 src="/assets/images/img-3.jpeg"
@@ -577,6 +589,42 @@
         </div>
       </div>
     </section>
+    <!-- Lightbox -->
+    <div
+      id="galleryLightbox"
+      class="fixed inset-0 z-[9999] bg-black/95 hidden items-center justify-center px-4"
+    >
+      <button
+        id="closeLightbox"
+        type="button"
+        class="absolute top-5 right-5 w-12 h-12 bg-white text-black flex items-center justify-center hover:bg-[#047dd4] hover:text-white transition"
+      >
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <button
+        id="prevImage"
+        type="button"
+        class="absolute left-4 md:left-8 w-12 h-12 bg-white/90 text-black flex items-center justify-center hover:bg-[#047dd4] hover:text-white transition"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <img
+        id="lightboxImage"
+        src=""
+        alt="Gallery Preview"
+        class="max-w-5xl w-full max-h-[85vh] object-contain"
+      />
+
+      <button
+        id="nextImage"
+        type="button"
+        class="absolute right-4 md:right-8 w-12 h-12 bg-white/90 text-black flex items-center justify-center hover:bg-[#047dd4] hover:text-white transition"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
 
     <!-- footer -->
     <footer class="bg-[var(--color-footer)] text-white">
@@ -722,6 +770,7 @@
 
     <!-- scripts -->
     <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/gallery.js"></script>
     <script src="./assets/scripts/index.js"></script>
   </body>
 </html>

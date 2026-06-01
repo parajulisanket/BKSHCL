@@ -293,76 +293,211 @@
     <!-- team -->
     <section class="py-12">
       <div class="max-w-7xl mx-auto px-4 md:px-0">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="relative overflow-hidden h-[400px]">
-            <img
-              src="./assets/images/dummy-1.avif"
-              class="w-full h-full object-cover"
-              alt=""
-            />
+        <!-- Tabs -->
+        <div class="flex flex-wrap gap-4 mb-10">
+          <button
+            class="team-tab active-team-tab px-6 py-3 border border-[var(--color-border)] bg-[var(--color-primary)] text-white font-semibold transition"
+            data-tab="board"
+          >
+            सञ्चालक समिति
+          </button>
+          <button
+            class="team-tab px-6 py-3 border border-[var(--color-border)] text-[var(--color-title)] font-bold hover:bg-[var(--color-primary)] hover:text-white transition"
+            data-tab="management"
+          >
+            उच्च व्यवस्थापन
+          </button>
+          <button
+            class="team-tab px-6 py-3 border border-[var(--color-border)] text-[var(--color-title)] font-bold hover:bg-[var(--color-primary)] hover:text-white transition"
+            data-tab="general"
+          >
+            सामान्य तथा प्राविधिक सदस्यहरू
+          </button>
+        </div>
 
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
-            >
-              <h1 class="font-bold text-2xl text-white">Name 1</h1>
-              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
+        <!-- सामान्य तथा प्राविधिक सदस्यहरू -->
+        <div
+          class="team-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+          data-content="general"
+        >
+          <!-- Member Card -->
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-1.avif"
+                class="w-full h-full object-cover"
+                alt="Team Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 1
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                प्राविधिक सदस्य
+              </p>
             </div>
           </div>
 
-          <div class="relative overflow-hidden h-[400px]">
-            <img
-              src="./assets/images/dummy-2.jpeg"
-              class="w-full h-full object-cover"
-              alt=""
-            />
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-2.jpeg"
+                class="w-full h-full object-cover"
+                alt="Team Member"
+              />
+            </div>
 
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
-            >
-              <h1 class="font-bold text-2xl text-white">Name 1</h1>
-              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 2
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                सामान्य सदस्य
+              </p>
             </div>
           </div>
-          <div class="relative overflow-hidden h-[400px]">
-            <img
-              src="./assets/images/dummy-1.avif"
-              class="w-full h-full object-cover"
-              alt=""
-            />
 
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
-            >
-              <h1 class="font-bold text-2xl text-white">Name 1</h1>
-              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-1.avif"
+                class="w-full h-full object-cover"
+                alt="Team Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 3
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                प्राविधिक सदस्य
+              </p>
             </div>
           </div>
-          <div class="relative overflow-hidden h-[400px]">
-            <img
-              src="./assets/images/dummy-2.jpeg"
-              class="w-full h-full object-cover"
-              alt=""
-            />
+        </div>
 
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
-            >
-              <h1 class="font-bold text-2xl text-white">Name 1</h1>
-              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
+        <!-- उच्च व्यवस्थापन -->
+        <div
+          class="team-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+          data-content="management"
+        >
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-2.jpeg"
+                class="w-full h-full object-cover"
+                alt="Management Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 4
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                प्रमुख कार्यकारी अधिकृत
+              </p>
             </div>
           </div>
-          <div class="relative overflow-hidden h-[400px]">
-            <img
-              src="./assets/images/dummy-1.avif"
-              class="w-full h-full object-cover"
-              alt=""
-            />
 
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-t from-black/50 via-transparent to-transparent text-center p-4"
-            >
-              <h1 class="font-bold text-2xl text-white">Name 1</h1>
-              <p class="font-semibold text-xl text-gray-200">अध्यक्ष</p>
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-1.avif"
+                class="w-full h-full object-cover"
+                alt="Management Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 5
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                व्यवस्थापक
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- सञ्चालक समिति -->
+        <div
+          class="team-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+          data-content="board"
+        >
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-1.avif"
+                class="w-full h-full object-cover"
+                alt="Board Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 6
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                अध्यक्ष
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-2.jpeg"
+                class="w-full h-full object-cover"
+                alt="Board Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 7
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                सञ्चालक सदस्य
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full border border-[var(--color-border)]">
+            <div class="h-[360px] w-full overflow-hidden bg-gray-100 border">
+              <img
+                src="./assets/images/dummy-1.avif"
+                class="w-full h-full object-cover"
+                alt="Board Member"
+              />
+            </div>
+
+            <div class="py-4 px-2 bg-[var(--color-light-bg)]">
+              <h3
+                class="font-bold text-2xl text-[var(--color-title)] leading-tight"
+              >
+                Name 8
+              </h3>
+              <p class="text-base font-medium text-[var(--color-text)] mt-1">
+                सञ्चालक सदस्य
+              </p>
             </div>
           </div>
         </div>
@@ -513,6 +648,7 @@
 
     <!-- scripts -->
     <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/team.js"></script>
     <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
