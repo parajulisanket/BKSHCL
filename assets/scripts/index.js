@@ -91,6 +91,22 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.add("flex");
     document.body.classList.add("overflow-hidden");
 
+    // Reset modal animation first
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0");
+
+    modalBox.classList.remove("scale-100", "translate-y-0", "opacity-100");
+    modalBox.classList.add("scale-95", "translate-y-6", "opacity-0");
+
+    // Run animation after modal becomes visible
+    requestAnimationFrame(function () {
+      modal.classList.remove("opacity-0");
+      modal.classList.add("opacity-100");
+
+      modalBox.classList.remove("scale-95", "translate-y-6", "opacity-0");
+      modalBox.classList.add("scale-100", "translate-y-0", "opacity-100");
+    });
+
     // Reset right-side scroll content to top
     const scrollContent = modal.querySelector(".overflow-y-auto");
     if (scrollContent) {
@@ -99,13 +115,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function closeModal() {
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.classList.remove("overflow-hidden");
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0");
 
-    // Clear image after closing
-    modalImage.src = "";
-    modalImage.alt = "";
+    modalBox.classList.remove("scale-100", "translate-y-0", "opacity-100");
+    modalBox.classList.add("scale-95", "translate-y-6", "opacity-0");
+
+    // Wait for animation to finish, then hide modal
+    setTimeout(function () {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+
+      modalImage.src = "";
+      modalImage.alt = "";
+    }, 300);
   }
 
   buttons.forEach(function (button) {
