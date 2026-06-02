@@ -105,6 +105,11 @@
                     सोधिएका प्रश्नहरू</a
                   >
                 </li>
+                <li>
+                  <a href="/Tender-Transformer.html" class="dropdown-link">
+                    खरिद प्रक्रिया</a
+                  >
+                </li>
               </ul>
             </li>
 
@@ -276,7 +281,6 @@
         </div>
       </nav>
     </header>
-
     <!-- Breadcrumbs -->
     <div
       class="relative max-w-7xl mx-auto my-6 bg-cover bg-center bg-no-repeat h-[350px] flex items-end px-6 md:px-10 pb-8"
@@ -298,21 +302,21 @@
     </div>
 
     <!-- Documents Section -->
-    <section class="py-12 ">
+    <section class="py-6">
       <div class="max-w-7xl mx-auto px-4 md:px-0">
         <!-- Search and Filter Bar -->
-        <div class="mb-6 border border-gray-300 bg-white p-4">
+        <div class="mb-6 border border-[#C5C6CE] bg-[#F1F4F6] p-4">
           <div class="flex flex-col md:flex-row gap-4">
             <div class="relative flex-1">
               <i
-                class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
+                class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[#44474D]"
               ></i>
 
               <input
                 type="text"
                 id="documentSearchInput"
                 placeholder="कागजात खोज्नुहोस्..."
-                class="w-full h-14 border border-gray-400 bg-white pl-12 pr-4 text-base text-gray-700 outline-none focus:border-[#031632]"
+                class="w-full h-14 border border-[#76777E] font-medium bg-white pl-12 pr-4 text-base text-[#6C7280] outline-none focus:border-[#031632] placeholder:text-[#6C7280]"
               />
             </div>
 
@@ -321,8 +325,8 @@
               id="documentFilterBtn"
               class="h-14 px-8 bg-[#071832] text-white font-semibold inline-flex items-center justify-center gap-3 hover:bg-[var(--color-primary)] transition"
             >
-              <i class="ph-bold ph-funnel text-xl"></i>
-              फिल्टर
+              <!-- <i class="ph-bold ph-funnel text-xl"></i> -->
+              खोज्नुहोस्
             </button>
           </div>
         </div>
@@ -334,28 +338,28 @@
         >
           <!-- Document 1 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   नियमावली
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 नियमावली
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 कम्पनी सम्बन्धी आधिकारिक नियमावली कागजात।
               </p>
             </div>
@@ -370,7 +374,7 @@
               <a
                 href="assets/pdfs/नियमावली.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -380,28 +384,28 @@
 
           <!-- Document 2 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   प्रबन्धपत्र
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 प्रबन्धपत्र
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 कम्पनीको आधिकारिक प्रबन्धपत्र डाउनलोड गर्नुहोस्।
               </p>
             </div>
@@ -416,7 +420,7 @@
               <a
                 href="assets/pdfs/प्रबन्धपत्र.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -426,28 +430,28 @@
 
           <!-- Document 3 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   दर्ता प्रमाणपत्र
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 Certificate of Incorporation
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 कम्पनी दर्ता सम्बन्धी आधिकारिक प्रमाणपत्र।
               </p>
             </div>
@@ -462,7 +466,7 @@
               <a
                 href="assets/pdfs/Certificate of Incorporation of Company.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -472,28 +476,28 @@
 
           <!-- Document 4 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   कर प्रमाणपत्र
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 PAN Certificate
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 कम्पनीको कर सम्बन्धी आधिकारिक PAN प्रमाणपत्र।
               </p>
             </div>
@@ -508,7 +512,7 @@
               <a
                 href="assets/pdfs/pan.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -518,28 +522,28 @@
 
           <!-- Document 5 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   संशोधित नियमावली
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 नियमावली दोस्रो संशोधन
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 नियमावली सम्बन्धी दोस्रो संशोधन कागजात।
               </p>
             </div>
@@ -554,7 +558,7 @@
               <a
                 href="assets/pdfs/niyamawali-2nd.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -564,28 +568,28 @@
 
           <!-- Document 6 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   संशोधित प्रबन्धपत्र
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 प्रबन्धपत्र दोस्रो संशोधन
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 प्रबन्धपत्र सम्बन्धी दोस्रो संशोधन कागजात।
               </p>
             </div>
@@ -600,7 +604,7 @@
               <a
                 href="assets/pdfs/prabandhapatra2nd.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -610,28 +614,28 @@
 
           <!-- Document 7 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   निर्देशिका
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 आन्तरिक लेखा परीक्षण निर्देशिका २०७४
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 आन्तरिक लेखा परीक्षण सम्बन्धी आधिकारिक निर्देशिका।
               </p>
             </div>
@@ -646,7 +650,7 @@
               <a
                 href="assets/pdfs/आन्तरिक लेखा परीक्षण निर्देशिका,२०७४.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -656,28 +660,28 @@
 
           <!-- Document 8 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   विनियमावली
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 आर्थिक प्रशासन विनियमावली २०७४
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 आर्थिक प्रशासन सम्बन्धी आधिकारिक विनियमावली।
               </p>
             </div>
@@ -692,7 +696,7 @@
               <a
                 href="assets/pdfs/आर्थिक प्रशासन विनियमावली,२०७४.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -702,28 +706,28 @@
 
           <!-- Document 9 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   कर्मचारी विनियमावली
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 कर्मचारी प्रशासन विनियमावली २०७४
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 कर्मचारी प्रशासन सम्बन्धी आधिकारिक विनियमावली।
               </p>
             </div>
@@ -738,7 +742,7 @@
               <a
                 href="assets/pdfs/कर्मचारी प्रशासन विनियमावली,२०७४.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड
@@ -748,28 +752,28 @@
 
           <!-- Document 10 -->
           <div
-            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[#031632] transition-all duration-300"
+            class="document-card bg-white border border-gray-300 p-6 min-h-[260px] flex flex-col justify-between hover:border-[var(--color-primary)] transition-all duration-300"
           >
             <div>
               <div class="flex items-start justify-between gap-4 mb-6">
-                <div class="text-gray-500 text-4xl">
+                <div class="text-[var(--color-primary)] text-4xl">
                   <i class="fa-regular fa-file-lines"></i>
                 </div>
 
                 <span
-                  class="bg-gray-100 text-gray-500 font-semibold text-sm px-4 py-2 rounded-sm"
+                  class="bg-gray-100 text-[#545F73] font-semibold text-sm px-4 py-2 rounded-sm"
                 >
                   खरीद विनियमावली
                 </span>
               </div>
 
               <h3
-                class="text-2xl font-semibold text-[#071832] leading-tight mb-4"
+                class="text-2xl font-semibold text-[var(--color-primary)] leading-tight mb-4"
               >
                 खरीद विनियमावली २०७७
               </h3>
 
-              <p class="text-lg text-gray-600 font-medium leading-relaxed">
+              <p class="text-lg text-[#545F73] font-medium leading-relaxed">
                 खरीद प्रक्रिया सम्बन्धी आधिकारिक विनियमावली।
               </p>
             </div>
@@ -784,7 +788,7 @@
               <a
                 href="assets/pdfs/खरीद विनियमावली, २०७७.pdf"
                 download
-                class="inline-flex items-center gap-2 text-[#071832] text-base font-bold hover:text-[var(--color-primary)] transition"
+                class="inline-flex items-center gap-2 text-[var(--color-primary)] text-base font-bold hover:text-[var(--color-primary)] transition"
               >
                 <i class="ph-bold ph-download-simple -mt-1"></i>
                 डाउनलोड

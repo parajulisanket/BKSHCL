@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </head>
   <body>
     <!-- navbar  -->
@@ -280,6 +281,7 @@
         </div>
       </nav>
     </header>
+
     <!-- Breadcrumbs -->
     <div
       class="relative max-w-7xl mx-auto my-6 bg-cover bg-center bg-no-repeat h-[350px] flex items-end px-6 md:px-10 pb-8"
@@ -291,235 +293,325 @@
 
       <div class="relative z-10 flex flex-col gap-1.5 w-full">
         <h1 class="text-2xl md:text-5xl font-bold text-white tracking-wide">
-          हामीसँग सम्पर्कमा रहनुहोस्
+          खरिद र सूचनाहरू
         </h1>
 
         <p class="text-xs md:text-lg text-white font-normal">
-          हाम्रो टोली तपाईंका जिज्ञासा र प्रतिक्रियाहरूलाई सम्बोधन गर्न सधैं
-          तयार छ।
+          नेपालको ऊर्जा भविष्यमा पारदर्शीता र अवसर।
         </p>
       </div>
     </div>
 
-    <!-- contact section -->
-    <section class="py-12">
+    <!-- Documents Section -->
+    <section class="py-6">
       <div class="max-w-7xl mx-auto px-4 md:px-0">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <!-- Left Contact Info -->
-          <div class="lg:col-span-5 space-y-6">
-            <!-- Corporate Office -->
-            <div
-              class="bg-white border border-[var(--color-border)] p-8 shadow-sm"
+        <!-- Search and Filter Bar -->
+        <div class="mb-6 border border-[#C5C6CE] bg-[#F1F4F6] p-4">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="relative flex-1">
+              <i
+                class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[#44474D]"
+              ></i>
+
+              <input
+                type="text"
+                id="documentSearchInput"
+                placeholder="कागजात खोज्नुहोस्..."
+                class="w-full h-14 border border-[#76777E] font-medium bg-white pl-12 pr-4 text-base text-[#6C7280] outline-none focus:border-[#031632] placeholder:text-[#6C7280]"
+              />
+            </div>
+
+            <button
+              type="button"
+              id="documentFilterBtn"
+              class="h-14 px-8 bg-[#071832] text-white font-semibold inline-flex items-center justify-center gap-3 hover:bg-[var(--color-primary)] transition"
             >
-              <div class="flex items-start gap-4">
-                <div class="text-[#0b1b3a] text-xl mt-1">
-                  <i class="fa-solid fa-building"></i>
-                </div>
-
-                <div>
-                  <h3 class="text-2xl font-bold text-[#0b1b3a] mb-5">
-                    कर्पोरेट कार्यालय
-                  </h3>
-
-                  <div class="space-y-4 text-gray-700">
-                    <div class="flex items-start gap-3">
-                      <i
-                        class="fa-solid fa-location-dot text-[#0b1b3a] mt-1"
-                      ></i>
-                      <p>
-                        काठमाडौं, नेपाल<br />
-                        नयाँ बानेश्वर, काठमाडौं
-                      </p>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-[#0b1b3a]"></i>
-                      <p>+९७७-०१-४XXXXX</p>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-envelope text-[#0b1b3a]"></i>
-                      <p>info@betankarnali.com.np</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Site Office -->
-            <div
-              class="bg-white border border-[var(--color-border)] p-8 shadow-sm"
-            >
-              <div class="flex items-start gap-4">
-                <div class="text-[#0b1b3a] text-xl mt-1">
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
-
-                <div>
-                  <h3 class="text-2xl font-bold text-[#0b1b3a] mb-5">
-                    आयोजना स्थल कार्यालय
-                  </h3>
-
-                  <div class="space-y-4 text-gray-700">
-                    <div class="flex items-start gap-3">
-                      <i
-                        class="fa-solid fa-location-dot text-[#0b1b3a] mt-1"
-                      ></i>
-                      <p>
-                        अछाम / सुर्खेत, नेपाल<br />
-                        बेतन कर्णाली प्रदेश
-                      </p>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                      <i class="fa-solid fa-phone text-[#0b1b3a]"></i>
-                      <p>+९७७-९८X XXXXX</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Emergency Contact -->
-            <div class="bg-red-50 border border-red-300 p-8 shadow-sm">
-              <div class="flex items-start gap-4">
-                <div class="text-red-700 text-xl mt-1">
-                  <i class="fa-solid fa-star-of-life"></i>
-                </div>
-
-                <div>
-                  <h3 class="text-2xl font-bold text-red-800 mb-3">
-                    आकस्मिक सम्पर्क
-                  </h3>
-
-                  <p class="text-red-800 leading-7 mb-5">
-                    आयोजना स्थलमा कुनै पनि सुरक्षा सम्बन्धी घटना भएमा कृपया सिधै
-                    नम्बरमा तुरुन्त सम्पर्क गर्नुहोस्।
-                  </p>
-
-                  <div
-                    class="flex items-center gap-3 text-red-800 font-bold text-2xl"
-                  >
-                    <i class="fa-solid fa-phone"></i>
-                    <span>९८६-००१-XXXX</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Contact Form -->
-          <div
-            class="lg:col-span-7 bg-white border border-[var(--color-border)] p-8 md:p-10 shadow-sm"
-          >
-            <h2 class="text-3xl md:text-4xl font-bold text-[#0b1b3a] mb-3">
-              पूछताछ फारम
-            </h2>
-
-            <p class="text-gray-600 mb-8">
-              कृपया तलको फारम भर्नुहोस् हाम्रो टोलीले २४ घण्टाभित्र तपाईंको
-              सम्पर्क गर्नेछ।
-            </p>
-
-            <form action="#" method="POST" class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Name -->
-                <div>
-                  <label class="block text-[#0b1b3a] font-semibold mb-2">
-                    पूरा नाम *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="तपाईंको नाम"
-                    class="w-full h-12 border border-gray-300 px-4 outline-none focus:border-[#047dd4] transition"
-                    required
-                  />
-                </div>
-
-                <!-- Email -->
-                <div>
-                  <label class="block text-[#0b1b3a] font-semibold mb-2">
-                    इमेल ठेगाना *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="example@mail.com"
-                    class="w-full h-12 border border-gray-300 px-4 outline-none focus:border-[#047dd4] transition"
-                    required
-                  />
-                </div>
-
-                <!-- Phone -->
-                <div>
-                  <label class="block text-[#0b1b3a] font-semibold mb-2">
-                    फोन नम्बर
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="+९७७"
-                    class="w-full h-12 border border-gray-300 px-4 outline-none focus:border-[#047dd4] transition"
-                  />
-                </div>
-
-                <!-- Subject -->
-                <div>
-                  <label class="block text-[#0b1b3a] font-semibold mb-2">
-                    विषय *
-                  </label>
-                  <select
-                    name="subject"
-                    class="w-full h-12 border border-gray-300 px-4 outline-none focus:border-[#047dd4] transition bg-white"
-                    required
-                  >
-                    <option value="">सामान्य सोधपुछ</option>
-                    <option value="project">आयोजना सम्बन्धी जानकारी</option>
-                    <option value="career">रोजगारी / करियर</option>
-                    <option value="media">मिडिया / प्रेस</option>
-                    <option value="emergency">सुरक्षा / आकस्मिक</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Message -->
-              <div>
-                <label class="block text-[#0b1b3a] font-semibold mb-2">
-                  सन्देश *
-                </label>
-                <textarea
-                  name="message"
-                  rows="7"
-                  placeholder="तपाईंको जिज्ञासा यहाँ लेख्नुहोस्..."
-                  class="w-full border border-gray-300 px-4 py-4 outline-none resize-none focus:border-[#047dd4] transition"
-                  required
-                ></textarea>
-              </div>
-
-              <!-- Button -->
-              <button type="submit" class="btn btn-primary">
-                सन्देश पठाउनुहोस्
-              </button>
-            </form>
+              <!-- <i class="ph-bold ph-funnel text-xl"></i> -->
+              खोज्नुहोस्
+            </button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- map iframe -->
-    <section class="pt-12">
-      <div class="w-full h-[520px] overflow-hidden">
-        <iframe
-          src="https://maps.google.com/maps?q=Betan%20Karnali%20Sanchayakarta%20Hydropower%20Co.%20Kathmandu&t=&z=16&ie=UTF8&iwloc=&output=embed"
-          width="100%"
-          height="100%"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+        <!-- Documents Grid -->
+        <div id="documentsGrid" class="flex flex-col gap-8">
+          <!-- Single Document Card -->
+          <div
+            class="document-card border border-[#D5D6DB] bg-white py-4 px-8 hover:border-[var(--color-primary)] transition"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div class="lg:col-span-9">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                  <span
+                    class="inline-flex items-center bg-[#075A9B] text-white text-sm font-semibold px-4 py-2"
+                  >
+                    बोलपत्र नं: BK-2026-004
+                  </span>
+
+                  <span
+                    class="inline-flex items-center bg-[#fcfe04] text-[#031632] text-sm font-semibold px-4 py-2"
+                  >
+                    सक्रिय
+                  </span>
+                </div>
+
+                <h3
+                  class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] leading-snug mb-4"
+                >
+                  उच्च-भोल्टेज ट्रान्सफर्मरहरूको आपूर्ति र डेलिभरी
+                </h3>
+
+                <p
+                  class="text-base md:text-lg text-[#44474D] font-medium leading-relaxed mb-6"
+                >
+                  बेतन कर्णाली सञ्चयकर्ता सञ्चालक कम्पनी पावर ट्रान्सफर्मरहरूको
+                  निर्माण, आपूर्ति र स्थापनाका लागि अन्तर्राष्ट्रिय
+                  प्रतिस्पर्धात्मक बोलपत्र आह्वान।
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6">
+                  <div
+                    class="inline-flex items-center gap-2 text-[#4B4D55] font-semibold text-base"
+                  >
+                    <i
+                      class="fa-regular fa-calendar-days text-[var(--color-primary)] -mt-1"
+                    ></i>
+                    <span>प्रकाशित मिति: १५ जनवरी, २०२६</span>
+                  </div>
+
+                  <div
+                    class="inline-flex items-center gap-2 text-[#C92A2A] font-bold text-base"
+                  >
+                    <i class="fa-regular fa-clock -mt-1"></i>
+                    <span>अन्तिम मिति: २८ फेब्रुअरी, २०२६</span>
+                  </div>
+
+                  <div
+                    class="inline-flex items-center gap-2 text-[#4B4D55] font-semibold text-base"
+                  >
+                    <i
+                      class="fa-regular fa-money-bill-1 text-[var(--color-primary)] -mt-1"
+                    ></i>
+                    <span>दस्तुर: रु. २०,०००</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="./assets/documents/high-voltage-transformer-tender.pdf"
+                    download
+                    class="w-full h-12 bg-[var(--color-primary)] text-white font-semibold text-base inline-flex items-center justify-center gap-3 hover:bg-[#031632] transition"
+                  >
+                    <i class="ph-bold ph-download-simple text-xl"></i>
+                    PDF डाउनलोड
+                  </a>
+
+                  <a
+                    href="./single-document.html"
+                    class="w-full h-12 border border-[var(--color-primary)] text-[var(--color-primary)] font-bold text-base inline-flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition"
+                  >
+                    थप विवरण
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Document Card -->
+          <div
+            class="document-card border border-[#D5D6DB] bg-white py-4 px-8 hover:border-[var(--color-primary)] transition"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div class="lg:col-span-9">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                  <span
+                    class="inline-flex items-center bg-[#075A9B] text-white text-sm font-semibold px-4 py-2"
+                  >
+                    बोलपत्र नं: BK-2026-004
+                  </span>
+
+                  <span
+                    class="inline-flex items-center bg-[#fcfe04] text-[#031632] text-sm font-semibold px-4 py-2"
+                  >
+                    सक्रिय
+                  </span>
+                </div>
+
+                <h3
+                  class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] leading-snug mb-4"
+                >
+                  उच्च-भोल्टेज ट्रान्सफर्मरहरूको आपूर्ति र डेलिभरी
+                </h3>
+
+                <p
+                  class="text-base md:text-lg text-[#44474D] font-medium leading-relaxed mb-6"
+                >
+                  बेतन कर्णाली सञ्चयकर्ता सञ्चालक कम्पनी पावर ट्रान्सफर्मरहरूको
+                  निर्माण, आपूर्ति र स्थापनाका लागि अन्तर्राष्ट्रिय
+                  प्रतिस्पर्धात्मक बोलपत्र आह्वान।
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6">
+                  <div
+                    class="inline-flex items-center gap-2 text-[#4B4D55] font-semibold text-base"
+                  >
+                    <i
+                      class="fa-regular fa-calendar-days text-[var(--color-primary)] -mt-1"
+                    ></i>
+                    <span>प्रकाशित मिति: १५ जनवरी, २०२६</span>
+                  </div>
+
+                  <div
+                    class="inline-flex items-center gap-2 text-[#C92A2A] font-bold text-base"
+                  >
+                    <i class="fa-regular fa-clock -mt-1"></i>
+                    <span>अन्तिम मिति: २८ फेब्रुअरी, २०२६</span>
+                  </div>
+
+                  <div
+                    class="inline-flex items-center gap-2 text-[#4B4D55] font-semibold text-base"
+                  >
+                    <i
+                      class="fa-regular fa-money-bill-1 text-[var(--color-primary)] -mt-1"
+                    ></i>
+                    <span>दस्तुर: रु. २०,०००</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="./assets/documents/high-voltage-transformer-tender.pdf"
+                    download
+                    class="w-full h-12 bg-[var(--color-primary)] text-white font-semibold text-base inline-flex items-center justify-center gap-3 hover:bg-[#031632] transition"
+                  >
+                    <i class="ph-bold ph-download-simple text-xl"></i>
+                    PDF डाउनलोड
+                  </a>
+
+                  <a
+                    href="./single-document.html"
+                    class="w-full h-12 border border-[var(--color-primary)] text-[var(--color-primary)] font-bold text-base inline-flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition"
+                  >
+                    थप विवरण
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Document Card -->
+          <div
+            class="document-card border border-[#D5D6DB] bg-white py-4 px-8 hover:border-[var(--color-primary)] transition"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div class="lg:col-span-9">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                  <span
+                    class="inline-flex items-center bg-[#075A9B] text-white text-sm font-semibold px-4 py-2"
+                  >
+                    बोलपत्र नं: BK-2026-004
+                  </span>
+
+                  <span
+                    class="inline-flex items-center bg-[#fcfe04] text-[#031632] text-sm font-semibold px-4 py-2"
+                  >
+                    सक्रिय
+                  </span>
+                </div>
+
+                <h3
+                  class="text-2xl md:text-3xl font-semibold text-[var(--color-primary)] leading-snug mb-4"
+                >
+                  उच्च-भोल्टेज ट्रान्सफर्मरहरूको आपूर्ति र डेलिभरी
+                </h3>
+
+                <p
+                  class="text-base md:text-lg text-[#44474D] font-medium leading-relaxed mb-6"
+                >
+                  बेतन कर्णाली सञ्चयकर्ता सञ्चालक कम्पनी पावर ट्रान्सफर्मरहरूको
+                  निर्माण, आपूर्ति र स्थापनाका लागि अन्तर्राष्ट्रिय
+                  प्रतिस्पर्धात्मक बोलपत्र आह्वान।
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6">
+                  <div
+                    class="inline-flex items-center gap-2 text-[#4B4D55] font-semibold text-base"
+                  >
+                    <i
+                      class="fa-regular fa-calendar-days text-[var(--color-primary)] -mt-1"
+                    ></i>
+                    <span>प्रकाशित मिति: १५ जनवरी, २०२६</span>
+                  </div>
+
+                  <div
+                    class="inline-flex items-center gap-2 text-[#C92A2A] font-bold text-base"
+                  >
+                    <i class="fa-regular fa-clock -mt-1"></i>
+                    <span>अन्तिम मिति: २८ फेब्रुअरी, २०२६</span>
+                  </div>
+
+                  <div
+                    class="inline-flex items-center gap-2 text-[#4B4D55] font-semibold text-base"
+                  >
+                    <i
+                      class="fa-regular fa-money-bill-1 text-[var(--color-primary)] -mt-1"
+                    ></i>
+                    <span>दस्तुर: रु. २०,०००</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="./assets/documents/high-voltage-transformer-tender.pdf"
+                    download
+                    class="w-full h-12 bg-[var(--color-primary)] text-white font-semibold text-base inline-flex items-center justify-center gap-3 hover:bg-[#031632] transition"
+                  >
+                    <i class="ph-bold ph-download-simple text-xl"></i>
+                    PDF डाउनलोड
+                  </a>
+
+                  <a
+                    href="./single-document.html"
+                    class="w-full h-12 border border-[var(--color-primary)] text-[var(--color-primary)] font-bold text-base inline-flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition"
+                  >
+                    थप विवरण
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Result Message -->
+        <div
+          id="noDocumentResult"
+          class="hidden mt-8 border border-[#C5C6CE] bg-white p-8 text-center"
         >
-        </iframe>
+          <h3 class="text-2xl font-extrabold text-[#031632] mb-2">
+            कुनै कागजात भेटिएन
+          </h3>
+          <p class="text-[#4B4D55] font-medium">
+            कृपया अर्को शब्द प्रयोग गरेर फेरि खोज्नुहोस्।
+          </p>
+        </div>
+
+        <!-- No Result Message -->
+        <div
+          id="noDocumentResult"
+          class="hidden mt-10 text-center bg-white border border-gray-300 p-8"
+        >
+          <h3 class="text-2xl font-bold text-[#071832] mb-2">
+            कुनै कागजात भेटिएन
+          </h3>
+          <p class="text-gray-600 text-lg">
+            कृपया अर्को शब्द प्रयोग गरेर खोज्नुहोस्।
+          </p>
+        </div>
       </div>
     </section>
 
@@ -667,6 +759,7 @@
 
     <!-- scripts -->
     <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/documents.js"></script>
     <script src="./assets/scripts/index.js"></script>
   </body>
 </html>

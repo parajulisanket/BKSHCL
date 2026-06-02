@@ -23,10 +23,10 @@
 
     <!-- navbar  -->
     <header class="sticky top-0 z-50 bg-[var(--color-bg)] shadow">
-      <nav class="max-w-[98rem] mx-auto px-4 md:px-0">
+      <nav class="max-w-[98rem] mx-auto px-4 md:px-6 2xl:px-0">
         <div class="flex items-center justify-between h-20">
           <!-- Left Logo -->
-          <a href="index.html" class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3 shrink-0">
             <img
               src="assets/images/logo-main.gif"
               alt="BKSHCL Logo"
@@ -36,7 +36,7 @@
 
           <!-- Center Nav Menu -->
           <ul
-            class="hidden lg:flex items-center gap-8 text-md font-medium text-[var(--color-title)]"
+            class="hidden xl:flex items-center gap-6 2xl:gap-8 text-md font-medium text-[var(--color-title)]"
           >
             <li>
               <a href="index.html" class="nav-link">गृहपृष्ठ</a>
@@ -46,16 +46,16 @@
             <li class="relative group">
               <button type="button" class="nav-link flex items-center gap-1">
                 हाम्रो बारेमा
-                <span class="text-xs"
-                  ><i class="fa-solid fa-chevron-down"></i
-                ></span>
+                <span class="text-xs">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
               </button>
 
               <ul
                 class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
               >
                 <li>
-                  <a href="/about-us.html" class="dropdown-link"
+                  <a href="about-us.html" class="dropdown-link"
                     >हाम्रो बारेमा</a
                   >
                 </li>
@@ -82,35 +82,41 @@
                 >लगानीकर्ता विवरण</a
               >
             </li>
+
             <!-- Dropdown -->
             <li class="relative group">
               <button type="button" class="nav-link flex items-center gap-1">
                 सञ्चार तथा प्रभाव
-                <span class="text-xs"
-                  ><i class="fa-solid fa-chevron-down"></i
-                ></span>
+                <span class="text-xs">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
               </button>
 
               <ul
                 class="absolute left-0 top-full w-52 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
               >
                 <li>
-                  <a href="/medai-and-news.html" class="dropdown-link"
-                    >समाचार तथा अपडेट</a
-                  >
+                  <a href="media-and-news.html" class="dropdown-link">
+                    समाचार तथा अपडेट
+                  </a>
                 </li>
                 <li>
-                  <a href="/gallery.html" class="dropdown-link">ग्यालेरी </a>
+                  <a href="gallery.html" class="dropdown-link">ग्यालेरी</a>
                 </li>
                 <li>
-                  <a href="/csr.html" class="dropdown-link">
-                    सामाजिक उत्तरदायित्व</a
-                  >
+                  <a href="csr.html" class="dropdown-link">
+                    सामाजिक उत्तरदायित्व
+                  </a>
                 </li>
                 <li>
-                  <a href="/faq.html" class="dropdown-link">
-                    सोधिएका प्रश्नहरू</a
-                  >
+                  <a href="faq.html" class="dropdown-link">
+                    सोधिएका प्रश्नहरू
+                  </a>
+                </li>
+                <li>
+                  <a href="Tender-Transformer.html" class="dropdown-link">
+                    खरिद प्रक्रिया
+                  </a>
                 </li>
               </ul>
             </li>
@@ -124,22 +130,39 @@
             </li>
           </ul>
 
-          <!-- Right Search -->
-          <div class="relative flex items-center gap-3">
+          <!-- Right Search + Mobile Button -->
+          <div class="relative flex items-center gap-3 shrink-0">
+            <!-- Desktop Search Dropdown -->
+            <div
+              id="searchOverlay"
+              class="hidden xl:block fixed inset-0 top-20 bg-black/40 opacity-0 pointer-events-none transition-all duration-300 z-[998]"
+            ></div>
+            <!-- Desktop Search Dropdown -->
             <div
               id="searchBox"
-              class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 opacity-0 scale-95 pointer-events-none transition-all duration-300"
+              class="hidden xl:block fixed top-24 left-1/2 -translate-x-1/2 z-[999] w-[min(720px,calc(100vw-2rem))] opacity-0 scale-95 pointer-events-none transition-all duration-300"
             >
-              <input
-                type="text"
-                placeholder="खोज्नुहोस्..."
-                class="w-56 px-4 py-2 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)]"
-              />
+              <div
+                class="bg-white border border-[var(--color-border)] shadow-xl p-3"
+              >
+                <div class="relative">
+                  <input
+                    type="text"
+                    placeholder="खोज्नुहोस्..."
+                    class="w-full h-12 border border-[var(--color-border)] bg-white pl-12 pr-4 text-base text-[var(--color-title)] focus:outline-none focus:border-[var(--color-primary)]"
+                  />
+
+                  <i
+                    class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-primary)]"
+                  ></i>
+                </div>
+              </div>
             </div>
 
+            <!-- Desktop Search Button -->
             <button
               id="searchToggle"
-              class="hidden lg:flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)] hover:bg-[var(--color-primary)] hover:text-white transition duration-300"
+              class="hidden xl:flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-primary)] text-white border border-[var(--color-primary)] hover:bg-[#031632] hover:border-[#031632] transition duration-300"
               type="button"
               aria-label="Search"
             >
@@ -149,8 +172,9 @@
             <!-- Mobile Menu Button -->
             <button
               id="mobileMenuBtn"
-              class="lg:hidden h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+              class="xl:hidden h-11 w-11 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)] hover:bg-[var(--color-primary)] hover:text-white transition"
               type="button"
+              aria-label="Open menu"
             >
               <i class="fa-solid fa-bars"></i>
             </button>
@@ -160,7 +184,7 @@
         <!-- Mobile Menu -->
         <div
           id="mobileMenu"
-          class="lg:hidden fixed inset-0 z-[999] bg-white opacity-0 pointer-events-none -translate-y-full transition-all duration-500 ease-in-out overflow-y-auto"
+          class="xl:hidden fixed inset-0 z-[999] bg-white opacity-0 pointer-events-none -translate-y-full transition-all duration-500 ease-in-out overflow-y-auto"
         >
           <div class="min-h-screen px-4 pb-8 pt-5 bg-white">
             <div class="flex items-center justify-between mb-6">
@@ -172,7 +196,7 @@
 
               <button
                 id="mobileMenuClose"
-                class="h-10 w-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)]"
+                class="h-11 w-11 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-title)] hover:bg-[var(--color-primary)] hover:text-white transition"
                 type="button"
                 aria-label="Close menu"
               >
@@ -180,16 +204,19 @@
               </button>
             </div>
 
-            <div class="mb-4">
+            <!-- Mobile Search -->
+            <div class="mb-5">
               <div class="relative">
                 <input
                   type="text"
                   placeholder="खोज्नुहोस्..."
-                  class="w-full px-4 py-3 pr-11 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)] transition"
+                  class="w-full h-12 px-4 pr-11 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:border-[var(--color-primary)] transition"
                 />
+
                 <button
                   type="button"
                   class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-title)] hover:text-[var(--color-primary)] transition"
+                  aria-label="Search"
                 >
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -197,7 +224,9 @@
             </div>
 
             <ul class="space-y-4 text-sm font-medium text-[var(--color-title)]">
-              <li><a href="index.html" class="mobile-link">गृहपृष्ठ</a></li>
+              <li>
+                <a href="index.html" class="mobile-link">गृहपृष्ठ</a>
+              </li>
 
               <!-- Dropdown 1: हाम्रो बारेमा -->
               <li class="mobile-dropdown-container">
@@ -216,12 +245,14 @@
                   style="max-height: 0px"
                 >
                   <li>
-                    <a href="about.html" class="mobile-sub-link"
-                      >हाम्रो बारेमा</a
-                    >
+                    <a href="about-us.html" class="mobile-sub-link">
+                      हाम्रो बारेमा
+                    </a>
                   </li>
                   <li>
-                    <a href="message.html" class="mobile-sub-link">सन्देश</a>
+                    <a href="message.html" class="mobile-sub-link">
+                      नेतृत्वको सन्देश
+                    </a>
                   </li>
                   <li>
                     <a href="team.html" class="mobile-sub-link">टिम</a>
@@ -232,13 +263,15 @@
                 </ul>
               </li>
 
-              <li><a href="projects.html" class="mobile-link">आयोजना</a></li>
               <li>
-                <a href="investor-detail.html" class="mobile-link"
-                  >लगानीकर्ता विवरण</a
-                >
+                <a href="projects.html" class="mobile-link">आयोजना</a>
               </li>
-              <li><a href="documents.html" class="mobile-link">कागजात</a></li>
+
+              <li>
+                <a href="investor-detail.html" class="mobile-link">
+                  लगानीकर्ता विवरण
+                </a>
+              </li>
 
               <!-- Dropdown 2: सञ्चार तथा प्रभाव -->
               <li class="mobile-dropdown-container">
@@ -257,27 +290,38 @@
                   style="max-height: 0px"
                 >
                   <li>
-                    <a href="media-and-news.html" class="mobile-sub-link"
-                      >समाचार तथा अपडेट</a
-                    >
+                    <a href="media-and-news.html" class="mobile-sub-link">
+                      समाचार तथा अपडेट
+                    </a>
                   </li>
                   <li>
                     <a href="gallery.html" class="mobile-sub-link">ग्यालेरी</a>
                   </li>
                   <li>
-                    <a href="csr.html" class="mobile-sub-link"
-                      >सामाजिक उत्तरदायित्व (CSR)</a
-                    >
+                    <a href="csr.html" class="mobile-sub-link">
+                      सामाजिक उत्तरदायित्व
+                    </a>
                   </li>
                   <li>
-                    <a href="faq.html" class="mobile-sub-link"
-                      >सोधिएका प्रश्नहरू (FAQs)</a
-                    >
+                    <a href="faq.html" class="mobile-sub-link">
+                      सोधिएका प्रश्नहरू
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Tender-Transformer.html" class="mobile-sub-link">
+                      खरिद प्रक्रिया
+                    </a>
                   </li>
                 </ul>
               </li>
 
-              <li><a href="contact.html" class="mobile-link">सम्पर्क</a></li>
+              <li>
+                <a href="documents.html" class="mobile-link">कागजात</a>
+              </li>
+
+              <li>
+                <a href="contact.html" class="mobile-link">सम्पर्क</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -898,7 +942,7 @@
             class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
-              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all w-[150px] min-w-[150px] shrink-0 text-center"
             >
               <span class="text-3xl font-extrabold text-[#047dd4]">२४</span>
               <span
@@ -927,7 +971,7 @@
             class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
-              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all w-[150px] min-w-[150px] shrink-0 text-center"
             >
               <span class="text-3xl font-extrabold text-[#047dd4]">१8</span>
               <span
@@ -955,7 +999,7 @@
             class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
-              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all w-[150px] min-w-[150px] shrink-0 text-center"
             >
               <span class="text-3xl font-extrabold text-[#047dd4]">१०</span>
               <span
@@ -983,7 +1027,7 @@
             class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
-              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all w-[150px] min-w-[150px] shrink-0 text-center"
             >
               <span class="text-3xl font-extrabold text-[#047dd4]">०५</span>
               <span
@@ -1011,7 +1055,7 @@
             class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
-              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all w-[150px] min-w-[150px] shrink-0 text-center"
             >
               <span class="text-3xl font-extrabold text-[#047dd4]">२८</span>
               <span
@@ -1039,7 +1083,7 @@
             class="news-card flex items-stretch bg-white shadow-sm overflow-hidden group hover:border-[#047dd4] hover:shadow transition-all duration-200"
           >
             <div
-              class="flex flex-col justify-center items-center bg-[#f0f2f5] px-6 py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all min-w-[100px] text-center"
+              class="flex flex-col justify-center items-center bg-[#f0f2f5] py-4 border-l-4 border-[#fcfe04] group-hover:border-[#047dd4] transition-all w-[150px] min-w-[150px] shrink-0 text-center"
             >
               <span class="text-3xl font-extrabold text-[#047dd4]">१२</span>
               <span
